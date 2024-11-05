@@ -1,6 +1,14 @@
 tailwind.config = {
     theme: {
         extend: {
+            screens: {
+                '3xl': '1440px',
+                '2xl': '1280px',
+                xl: '1024px',
+                lg: '992px',
+                md: '768px',
+                DEFAULT: '1360px',
+            },
             container: {
                 center: true,
                 padding: {
@@ -9,15 +17,8 @@ tailwind.config = {
                     '2xl': '32px',
                     md: '24px',
                 },
-                screens: {
-                    '3xl': '1440px',
-                    '2xl': '1280px',
-                    'xl': '1024px',
-                    lg: '992px',
-                    md: '768px',
-                    DEFAULT: '1360px',
-                },
             },
+
         },
 
         colors: {
@@ -37,6 +38,12 @@ tailwind.config = {
                 100: "#F3F4F6",
                 50: "#F9FAFB",
             },
+            gray: {
+                10: "#112722",
+                9: "#1F3731",
+                8: "#37514B",
+                7: "#4B635D",
+            }
         }
     }
 }

@@ -13,12 +13,7 @@ body {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
-// a {
-//   text-decoration: none;
-//   &:hover {
-//     color: var(--primary);
-//   }
-// }
+
 figure {
   margin: 0;
   display: flex;
@@ -48,6 +43,22 @@ select {
 
 // ----------------------- Text heading style library -----------------------
 .text-heading {
+  &-home {
+    font-size: 52px;
+    line-height: 139%;
+    font-weight: 600;
+    @media screen and (max-width: 1439px) {
+      font-size: 48px;
+    }
+    @media screen and (max-width: 1280px) {
+      font-size: 44px;
+    }
+
+    @media screen and (max-width: 992px) {
+      font-size: 40px;
+    }
+  }
+
   &-h1 {
     font-size: 60px;
     line-height: 126%;
@@ -343,6 +354,24 @@ select {
   }
 }
 
+.truncate {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  &-2row {
+    @extend .truncate;
+    -webkit-line-clamp: 2;
+  }
+  &-3row {
+    @extend .truncate;
+    -webkit-line-clamp: 3;
+  }
+  &-4row {
+    @extend .truncate;
+    -webkit-line-clamp: 4;
+  }
+}
+
 // search header style
 input.home-search {
   display: flex;
@@ -441,6 +470,8 @@ input.home-search {
   display: flex;
   align-items: center;
   justify-content: center;
+  width: fit-content;
+  height: fit-content;
   gap: 8px;
   padding: 16px 32px;
   border-radius: 8px;
@@ -456,8 +487,21 @@ input.home-search {
     color: var(--primary);
     background-color: #fff;
   }
+  &.bg-white {
+    background-color: #fff;
+    border-color: #fff;
+  }
   &.p-10-24 {
     padding: 10px 24px;
+  }
+  &.p-8-20 {
+    padding: 8px 20px;
+  }
+  &.p-10-20 {
+    padding: 10px 20px;
+  }
+  &.p-16 {
+    padding: 16px;
   }
 }
 
@@ -465,5 +509,149 @@ input.home-search {
 .shadow {
   &-1 {
     box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.15);
+  }
+  &-2 {
+    box-shadow: 0px 2px 20px 0px rgba(199, 199, 199, 0.25);
+  }
+  &-button {
+    box-shadow: 0px 4px 20px 0px rgba(219, 219, 219, 0.49);
+  }
+}
+
+.card-bg {
+  &-red {
+    background: linear-gradient(180deg, #aa2424 0%, #ff6363 100%),
+      linear-gradient(180deg, #ff7070 0%, #efabab 100%);
+  }
+  &-yellow {
+    background: linear-gradient(180deg, #ce8a1c 0%, #f3b773 100%);
+  }
+  &-purple {
+    background: linear-gradient(180deg, #b137b1 0%, #e862d8 100%),
+      linear-gradient(180deg, #494ca2 0%, #6d79c5 100%);
+  }
+}
+
+// hover link style
+.footer-hover-link {
+  .icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(243, 247, 255, 0.2);
+  }
+  &:hover {
+    .text {
+      a {
+        color: #ed1b24;
+      }
+    }
+  }
+}
+
+.swiper {
+  width: 100%;
+  height: fit-content;
+  .swiper-pagination {
+    position: unset;
+    margin-top: 24px;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+    .swiper-pagination-bullet {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      opacity: 1;
+      background: #fff;
+      box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.07);
+    }
+    .swiper-pagination-bullet-active {
+      width: 31px;
+      border-radius: 8px;
+      background: #ed1b24;
+    }
+    &.gray-1 {
+      .swiper-pagination-bullet {
+        @extend .swiper-pagination-bullet;
+        background: #d1d5db;
+      }
+      .swiper-pagination-bullet-active {
+        @extend .swiper-pagination-bullet-active;
+        background: #ed1b24;
+      }
+    }
+  }
+  &.swiper-homepage {
+    .swiper-pagination {
+      position: absolute;
+      margin-top: 0;
+      bottom: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 2;
+    }
+  }
+}
+
+.footer-input {
+  .input-footer {
+    width: 100%;
+    padding: 8px 24px;
+    padding-right: 138px;
+    border-radius: 8px;
+    @extend .text-body-sm-medium;
+    color: #1f2237;
+    background: #fff;
+    height: 60px;
+    border: 1px solid #fff;
+    &::placeholder {
+      color: #9ca3af;
+    }
+    &:focus {
+      border: 1px solid var(--primary);
+      caret-color: var(--primary);
+    }
+  }
+  .button {
+    height: 44px;
+    position: absolute;
+    right: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+
+.social-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #98a2b3;
+  &:hover {
+    background: #fff;
+    svg {
+      path {
+        fill: var(--primary);
+      }
+    }
+  }
+}
+
+hr {
+  &.divider-footer {
+    width: 100%;
+    height: 1px;
+    border: none;
+    background: #f9fafb;
+    opacity: 0.16;
   }
 }
