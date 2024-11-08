@@ -216,101 +216,873 @@
             </div>
         </section>
 
+
+        <style>
+            .swiper .swiper-slide {
+                border-radius: 20px;
+            }
+
+            .swiper-wrap .button-next {
+                position: absolute;
+                top: 50%;
+                right: 0;
+                transform: translate(50%, -50%);
+                width: 36px;
+                height: 36px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 8px;
+                border-radius: 8px;
+                background: #FFF;
+                box-shadow: 0px 4px 20px 0px rgba(219, 219, 219, 0.49);
+            }
+
+            .swiper-wrap .button-next:after {
+                content: "";
+                width: 20px;
+                height: 20px;
+                background: url(/assets/image/icon/arrow-right-20-second.svg) no-repeat;
+            }
+
+            .swiper-wrap .button-prev {
+                position: absolute;
+                top: 50%;
+                left: 0;
+                transform: translate(-50%, -50%);
+                width: 36px;
+                height: 36px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 8px;
+                border-radius: 8px;
+                background: #FFF;
+                box-shadow: 0px 4px 20px 0px rgba(219, 219, 219, 0.49);
+            }
+
+            .swiper-wrap .button-prev:after {
+                content: "";
+                width: 20px;
+                height: 20px;
+                background: url(/assets/image/icon/arrow-left-20-second.svg) no-repeat;
+            }
+
+            .price-feature {
+                display: flex;
+                padding: 16px 24px;
+                flex-direction: column;
+                gap: 12px;
+                border-radius: 12px;
+                border: 1px solid #FDE68A;
+                background: linear-gradient(180deg, #FFFBEC 0%, rgba(255, 255, 255, 0.00) 100%);
+            }
+
+            .feature-promo {
+                display: flex;
+                flex-direction: column;
+                gap: 8px;
+            }
+
+            .feature-promo li {
+                display: flex;
+                align-items: center;
+                gap: 16px;
+            }
+
+            .feature-promo li:before {
+                content: "";
+                background: url(/assets/image/icon/check-round.svg) no-repeat;
+                width: 24px;
+                height: 24px;
+            }
+        </style>
         <section>
-            <div class="container p-10 rounded-xl bg-white flex flex-wrap gap-12">
-                <div class="w-full max-w-[553px]">
-                    <div class="slider-galeria swiper ">
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide">
-                                <div class="rounded-3xl">
-                                    <figure>
-                                        <img src="/assets/image/product/1.png" alt="product">
-                                    </figure>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="rounded-3xl">
-                                    <figure>
-                                        <img src="/assets/image/product/1.png" alt="product">
-                                    </figure>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="rounded-3xl">
-                                    <figure>
-                                        <img src="/assets/image/product/1.png" alt="product">
-                                    </figure>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="slider-galeria-thumbs swiper">
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide">
-                                <div class="rounded-3xl">
-                                    <figure>
-                                        <img src="/assets/image/product/1.png" alt="product">
-                                    </figure>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="rounded-3xl">
-                                    <figure>
-                                        <img src="/assets/image/product/1.png" alt="product">
-                                    </figure>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="rounded-3xl">
-                                    <figure>
-                                        <img src="/assets/image/product/1.png" alt="product">
-                                    </figure>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="flex-1">
-                    <div class="flex gap-2">
-                        <div class="flex-1">
-                            <h2 class="text-title-h3-5 text-black">SureMeal Zero Sugar Original
-                                (Box of 6)</h2>
-                            <div class="flex items-center gap-3">
-                                <div class="flex items-center gap-3">
-                                    <p class="text-body-md-regular text-neutral-500">48 servings</p>
-                                    <div class="w-1 h-1 rounded-full bg-neutral-400"></div>
-                                    <div class="flex items-center gap-1">
-                                        <figure><img src="/assets/image/icon/star-second.svg" alt="icon">
-                                        </figure>
-                                        <figure><img src="/assets/image/icon/star-second.svg" alt="icon">
-                                        </figure>
-                                        <figure><img src="/assets/image/icon/star-second.svg" alt="icon">
-                                        </figure>
-                                        <figure><img src="/assets/image/icon/star-second.svg" alt="icon">
-                                        </figure>
-                                        <figure><img src="/assets/image/icon/star-second.svg" alt="icon">
+            <div class="container">
+                <div class="p-6 lg:p-10 rounded-xl bg-white flex flex-wrap gap-8 lg:gap-12">
+                    <div class="w-full lg:w-1/2 xl:max-w-[553px] flex flex-col gap-4">
+                        <div class="hidden md:block slider-galeria swiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="rounded-3xl">
+                                        <figure>
+                                            <img src="/assets/image/product/1.png" alt="product">
                                         </figure>
                                     </div>
-                                    <div class="w-1 h-1 rounded-full bg-neutral-400"></div>
-                                    <p class="text-body-sm-regular text-neutral-500">30 Reviews</p>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="rounded-3xl">
+                                        <figure>
+                                            <img src="/assets/image/product/1.png" alt="product">
+                                        </figure>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="rounded-3xl">
+                                        <figure>
+                                            <img src="/assets/image/product/1.png" alt="product">
+                                        </figure>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="">
-                            <a href="#">
-                                <figure><img src="" alt=""></figure>
-                            </a>
-                            <a href="#">
-                                <figure><img src="" alt=""></figure>
-                            </a>
-                            <a href="#">
-                                <figure><img src="" alt=""></figure>
-                            </a>
+                        <div class="relative swiper-wrap">
+                            <div class="slider-galeria-thumbs swiper">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <div class="rounded-3xl">
+                                            <figure>
+                                                <img src="/assets/image/product/1.png" alt="product">
+                                            </figure>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="rounded-3xl">
+                                            <figure>
+                                                <img src="/assets/image/product/1.png" alt="product">
+                                            </figure>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="rounded-3xl">
+                                            <figure>
+                                                <img src="/assets/image/product/1.png" alt="product">
+                                            </figure>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- If we need navigation -->
+                            <div class="button-next"></div>
+                            <div class="button-prev"></div>
+                        </div>
+                    </div>
+                    <div class="flex-1 flex flex-col gap-8">
+                        <div class="flex flex-col md:flex-row gap-2">
+                            <div class="flex-1">
+                                <h2 class="text-heading-h3-5 text-black">SureMeal Zero Sugar Original
+                                    (Box of 6)</h2>
+                                <div class="flex items-center gap-3">
+                                    <div class="flex items-center gap-1 md:gap-3">
+                                        <p class="text-body-md-regular text-neutral-500">48 servings</p>
+                                        <div class="w-1 h-1 rounded-full bg-neutral-400"></div>
+                                        <div class="flex items-center gap-1">
+                                            <figure><img src="/assets/image/icon/star-second.svg" alt="icon">
+                                            </figure>
+                                            <figure><img src="/assets/image/icon/star-second.svg" alt="icon">
+                                            </figure>
+                                            <figure><img src="/assets/image/icon/star-second.svg" alt="icon">
+                                            </figure>
+                                            <figure><img src="/assets/image/icon/star-second.svg" alt="icon">
+                                            </figure>
+                                            <figure><img src="/assets/image/icon/star-second.svg" alt="icon">
+                                            </figure>
+                                        </div>
+                                        <div class="w-1 h-1 rounded-full bg-neutral-400"></div>
+                                        <p class="text-body-sm-regular text-neutral-500">30 Reviews</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex flex-row md:flex-col gap-3">
+                                <a href="#">
+                                    <figure class="w-8 h-8"><img src="/assets/image/icon/x-round.svg" alt="icon">
+                                    </figure>
+                                </a>
+                                <a href="#">
+                                    <figure class="w-8 h-8"><img src="/assets/image/icon/fb-round.svg" alt="icon">
+                                    </figure>
+                                </a>
+                                <a href="#">
+                                    <figure class="w-8 h-8"><img src="/assets/image/icon/pri-round.svg" alt="icon">
+                                    </figure>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center gap-4 lg:gap-8">
+                            <p class="text-body-md-regular">Quantity</p>
+                            <div class="flex flex-wrap gap-2">
+                                <div class="quantity-choose text-body-md-regular active">
+                                    1 pack
+                                </div>
+                                <div class="quantity-choose text-body-md-regular">
+                                    3 pack
+                                </div>
+                                <div class="quantity-choose text-body-md-regular">
+                                    5 pack
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="price-feature">
+                            <div class="flex flex-col gap-1">
+                                <p class="text-body-lg-medium text-gray-7">Buy now at price</p>
+                                <h2 class="text-heading-h3-5 text-gray-8">$96.00 USD</h2>
+                                <p class="text-body-md-regular text-gray-7">$120.00 USD&nbsp;<span
+                                        class="text-body-md-medium text-primary">30%</span></p>
+                            </div>
+                            <hr class="divider">
+                            <div class="py-3 px-5">
+                                <p class="text-body-lg-semibold text-gray-7">Featured Promotion</p>
+                                <ul class="feature-promo text-body-md-regular text-gray-7 mt-3">
+                                    <li>$20 USD saving</li>
+                                    <li>Free shipping 48 states</li>
+                                </ul>
+                            </div>
+
+                            <div class="flex flex-col md:flex-row gap-3">
+                                <button
+                                    class="button border-primary w-full md:w-1/2 text-body-md-semibold text-primary">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24"
+                                        fill="none">
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M3.79047 2.29242C3.3997 2.15503 2.97155 2.36044 2.83416 2.7512C2.69678 3.14197 2.90218 3.57012 3.29295 3.7075L3.55416 3.79934C4.22177 4.03406 4.66052 4.18961 4.98336 4.34802C5.28659 4.4968 5.42026 4.61723 5.50832 4.74609C5.59858 4.87818 5.66828 5.0596 5.70761 5.42295C5.74877 5.80316 5.74979 6.29837 5.74979 7.03832L5.74979 9.64C5.74979 12.5816 5.81302 13.5523 6.67943 14.4662C7.54583 15.38 8.94028 15.38 11.7292 15.38H17.0321C18.5931 15.38 19.3736 15.38 19.9253 14.9304C20.477 14.4808 20.6346 13.7164 20.9497 12.1875L21.4495 9.76275C21.7966 8.02369 21.9702 7.15417 21.5262 6.57708C21.0823 6 19.5655 6 17.8805 6H7.24233C7.23564 5.72967 7.22295 5.48373 7.1989 5.26153C7.14517 4.76515 7.02875 4.31243 6.74677 3.89979C6.46259 3.48393 6.08474 3.21759 5.64411 3.00139C5.23203 2.79919 4.70839 2.61511 4.09187 2.39838L3.79047 2.29242ZM13.75 8.25C14.1642 8.25 14.5 8.58579 14.5 9V10.25H15.75C16.1642 10.25 16.5 10.5858 16.5 11C16.5 11.4142 16.1642 11.75 15.75 11.75H14.5V13C14.5 13.4142 14.1642 13.75 13.75 13.75C13.3358 13.75 13 13.4142 13 13V11.75H11.75C11.3358 11.75 11 11.4142 11 11C11 10.5858 11.3358 10.25 11.75 10.25H13V9C13 8.58579 13.3358 8.25 13.75 8.25Z"
+                                            fill="#ED1B24" />
+                                        <path
+                                            d="M8.25 18C9.07843 18 9.75 18.6716 9.75 19.5C9.75 20.3284 9.07843 21 8.25 21C7.42157 21 6.75 20.3284 6.75 19.5C6.75 18.6716 7.42157 18 8.25 18Z"
+                                            fill="#ED1B24" />
+                                        <path
+                                            d="M17.25 18.0001C18.0784 18.0001 18.75 18.6716 18.75 19.5001C18.75 20.3285 18.0784 21.0001 17.25 21.0001C16.4216 21.0001 15.75 20.3285 15.75 19.5001C15.75 18.6716 16.4216 18.0001 17.25 18.0001Z"
+                                            fill="#ED1B24" />
+                                    </svg>
+                                    Add To Cart
+                                </button>
+                                <button class="button bg-primary w-full md:w-1/2 text-body-md-semibold text-white">Buy
+                                    Now</button>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
+        <style>
+            .description-tab {
+                display: flex;
+                padding: 20px 24px;
+                align-items: center;
+                gap: 8px;
+                border-radius: 8px;
+                border-left: 4px solid transparent;
+                background: #FFF;
+            }
+
+            .description-tab.active {
+                border-color: #0E74BC;
+                background: linear-gradient(90deg, rgba(2, 128, 206, 0.25) 0%, rgba(255, 255, 255, 0.00) 150.99%);
+            }
+        </style>
+        <section class="mt-6 lg:mt-10">
+            <div class="container">
+                <div class="flex flex-col md:flex-row gap-6 py-10 px-6 rounded-xl bg-white">
+                    <div class="w-full flex flex-row md:flex-col md:w-1/3 max-w-[304px]">
+                        <div class="description-tab active" data-tab="view-1">
+                            <p class="text-body-xl-medium text-gray-8">Product info</p>
+                        </div>
+                        <div class="description-tab" data-tab="view-2">
+                            <p class="text-body-xl-medium text-gray-8">Benefit</p>
+                        </div>
+                        <div class="description-tab" data-tab="view-3">
+                            <p class="text-body-xl-medium text-gray-8">use</p>
+                        </div>
+                    </div>
+                    <div id="view-1" class="description-view flex-1 flex flex-col gap-6">
+                        <h2 class="text-heading-h4 text-secondary">SureMeal Zero Sugar Original (Box of 6)</h2>
+                        <hr class="divider">
+                        <div class="flex flex-col gap-10">
+                            <div class="flex flex-col gap-4">
+                                <h3 class="text-heading-h6 text-gray-8">Product info</h3>
+                                <ul class="text-body-md-regular text-gray-7">
+                                    <li>
+                                        (8 Servings / bottle) SureMeal™ Zero Sugar Original powder mix is ideal for
+                                        mixing with your favorite smoothie or simply with 8 oz. of water or milk.
+                                    </li>
+                                    <li>
+                                        Ideal for individuals of all ages, Zero Sugar Original, provides an easy,
+                                        affordable way to help meet your daily nutritional requirements. With 0g of
+                                        Sugar & 26 key vitamins & minerals, Zero Sugar Original is a great
+                                        meal-replacement or meal-supplement option for diabetics and children.
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="flex flex-col gap-4">
+                                <h3 class="text-heading-h6 text-gray-8">Benefit</h3>
+                                <ul class="list-disc pl-5 text-body-md-regular text-gray-7">
+                                    <li>
+                                        No Sugar
+                                    </li>
+                                    <li>
+                                        9g Protein
+                                    </li>
+                                    <li>
+                                        26 Vitamins & Minerals
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="view-2" class="description-view hidden">
+                        View 2
+                    </div>
+                    <div id="view-3" class="description-view hidden">
+                        View 3
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="mt-6 lg:mt-10">
+            <div class="container">
+                <div class="flex flex-wrap gap-4 md:gap-6 py-10 px-4 md:px-6 rounded-xl bg-white">
+                    <div class="flex flex-col gap-6 lg:gap-8 w-full">
+                        <div class="flex gap-2 items-end">
+                            <h2 class="text-heading-h4 text-black">Reviews</h2>
+                            <p class="text-body-md-regular text-gray-7">(9 Reviews)</p>
+                        </div>
+                        <hr class="divider">
+                        <div class="flex flex-col md:flex-row items-center gap-10 lg:gap-20">
+                            <div class="">
+                                <p class="text-body-md-medium text-gray-7">Based on 12 Reviews</p>
+                                <div class="flex items-center gap-1 mt-2">
+                                    <p class="text-heading-h2 text-gray-9">5.0</p>
+                                    <figure class="w-6 h-6"><img src="/assets/image/icon/star-yellow.svg" alt="icon">
+                                    </figure>
+                                </div>
+                                <button class="button bg-primary mt-5 text-body-md-semibold text-white">
+                                    Write a review
+                                </button>
+                            </div>
+
+                            <div class="flex flex-col gap-3">
+                                <div class="star-list flex items-center gap-4">
+                                    <div class="flex items-center gap-1">
+                                        <figure><img src="/assets/image/icon/star-yellow.svg" alt="icon"></figure>
+                                        <figure><img src="/assets/image/icon/star-yellow.svg" alt="icon"></figure>
+                                        <figure><img src="/assets/image/icon/star-yellow.svg" alt="icon"></figure>
+                                        <figure><img src="/assets/image/icon/star-yellow.svg" alt="icon"></figure>
+                                        <figure><img src="/assets/image/icon/star-yellow.svg" alt="icon"></figure>
+                                    </div>
+                                    <div class="progress-bar">
+                                        <div class="progress-fill" style="width: 100%;"></div>
+                                    </div>
+                                    <p class="text-body-md-regular text-gray-7">9</p>
+                                </div>
+                                <div class="star-list flex items-center gap-4">
+                                    <div class="flex items-center gap-1">
+                                        <figure><img src="/assets/image/icon/star-yellow.svg" alt="icon"></figure>
+                                        <figure><img src="/assets/image/icon/star-yellow.svg" alt="icon"></figure>
+                                        <figure><img src="/assets/image/icon/star-yellow.svg" alt="icon"></figure>
+                                        <figure><img src="/assets/image/icon/star-yellow.svg" alt="icon"></figure>
+                                        <figure><img src="/assets/image/icon/star-gray.svg" alt="icon"></figure>
+                                    </div>
+                                    <div class="progress-bar">
+                                        <div class="progress-fill" style="width: 0%;"></div>
+                                    </div>
+                                    <p class="text-body-md-regular text-gray-7">0</p>
+                                </div>
+                                <div class="star-list flex items-center gap-4">
+                                    <div class="flex items-center gap-1">
+                                        <figure><img src="/assets/image/icon/star-yellow.svg" alt="icon"></figure>
+                                        <figure><img src="/assets/image/icon/star-yellow.svg" alt="icon"></figure>
+                                        <figure><img src="/assets/image/icon/star-yellow.svg" alt="icon"></figure>
+                                        <figure><img src="/assets/image/icon/star-gray.svg" alt="icon"></figure>
+                                        <figure><img src="/assets/image/icon/star-gray.svg" alt="icon"></figure>
+                                    </div>
+                                    <div class="progress-bar">
+                                        <div class="progress-fill" style="width: 0%;"></div>
+                                    </div>
+                                    <p class="text-body-md-regular text-gray-7">0</p>
+                                </div>
+                                <div class="star-list flex items-center gap-4">
+                                    <div class="flex items-center gap-1">
+                                        <figure><img src="/assets/image/icon/star-yellow.svg" alt="icon"></figure>
+                                        <figure><img src="/assets/image/icon/star-yellow.svg" alt="icon"></figure>
+                                        <figure><img src="/assets/image/icon/star-gray.svg" alt="icon"></figure>
+                                        <figure><img src="/assets/image/icon/star-gray.svg" alt="icon"></figure>
+                                        <figure><img src="/assets/image/icon/star-gray.svg" alt="icon"></figure>
+                                    </div>
+                                    <div class="progress-bar">
+                                        <div class="progress-fill" style="width: 0%;"></div>
+                                    </div>
+                                    <p class="text-body-md-regular text-gray-7">0</p>
+                                </div>
+                                <div class="star-list flex items-center gap-4">
+                                    <div class="flex items-center gap-1">
+                                        <figure><img src="/assets/image/icon/star-yellow.svg" alt="icon"></figure>
+                                        <figure><img src="/assets/image/icon/star-gray.svg" alt="icon"></figure>
+                                        <figure><img src="/assets/image/icon/star-gray.svg" alt="icon"></figure>
+                                        <figure><img src="/assets/image/icon/star-gray.svg" alt="icon"></figure>
+                                        <figure><img src="/assets/image/icon/star-gray.svg" alt="icon"></figure>
+                                    </div>
+                                    <div class="progress-bar">
+                                        <div class="progress-fill" style="width: 0%;"></div>
+                                    </div>
+                                    <p class="text-body-md-regular text-gray-7">0</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center gap-4">
+                            <p class="text-body-md-regular">Sort by</p>
+                            <div class="flex flex-wrap gap-3">
+                                <div class="comment-choose active">
+                                    Most recent
+                                </div>
+                                <div class="comment-choose">
+                                    Highest rating
+                                </div>
+                                <div class="comment-choose">
+                                    Lowest rating
+                                </div>
+                                <div class="comment-choose">
+                                    Most helpful
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="flex flex-col items-center gap-8">
+                            <div class="recent-view custom-scrollbar grid grid-cols-1 lg:grid-cols-2 gap-y-8 gap-x-6">
+                                <div class="p-5 rounded-xl flex flex-col gap-4 border border-solid border-neutral-300">
+                                    <p class="text-body-lg-regular text-neutral-700">For Weight Gain: Take one or two
+                                        SureMeal™ Zero Sugar Original shakes between meals.
+                                        For added calories mix with whole milk or juice.</p>
+                                    <div
+                                        class="flex flex-col md:flex-row items-start lg:items-end gap-6 md:gap-10 justify-between">
+                                        <div class="flex gap-4">
+                                            <figure class="w-[68px] h-[68px] rounded-full"><img
+                                                    src="/assets/image/avatar-68.png" alt="icon"></figure>
+                                            <div class="flex flex-col gap-2">
+                                                <p class="text-heading-h7 text-secondary">Mr. Frank Brauer</p>
+                                                <div class="flex items-center gap-1">
+                                                    <figure><img src="/assets/image/icon/star-yellow.svg" alt="icon">
+                                                    </figure>
+                                                    <figure><img src="/assets/image/icon/star-yellow.svg" alt="icon">
+                                                    </figure>
+                                                    <figure><img src="/assets/image/icon/star-yellow.svg" alt="icon">
+                                                    </figure>
+                                                    <figure><img src="/assets/image/icon/star-yellow.svg" alt="icon">
+                                                    </figure>
+                                                    <figure><img src="/assets/image/icon/star-yellow.svg" alt="icon">
+                                                    </figure>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="flex items-center gap-4">
+                                            <!-- đã like -->
+                                            <div class="flex items-center gap-1">
+                                                <figure><img src="/assets/image/icon/like-second.svg" alt=""></figure>
+                                                <p class="text-body-lg-regular text-secondary">22</p>
+                                            </div>
+                                            <!-- chưa like -->
+                                            <!-- <div class="flex items-center gap-1">
+                                                <figure><img src="/assets/image/icon/like-gray.svg" alt=""></figure>
+                                                <p class="text-body-lg-regular text-neutral-500">22</p>
+                                            </div> -->
+                                            <div class="flex items-center gap-1">
+                                                <figure><img src="/assets/image/icon/dislike-gray.svg" alt=""></figure>
+                                                <p class="text-body-lg-regular text-neutral-500">0</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="p-5 rounded-xl flex flex-col gap-4 border border-solid border-neutral-300">
+                                    <p class="text-body-lg-regular text-neutral-700">For Weight Gain: Take one or two
+                                        SureMeal™ Zero Sugar Original shakes between meals.
+                                        For added calories mix with whole milk or juice.</p>
+                                    <div
+                                        class="flex flex-col md:flex-row items-start lg:items-end gap-6 md:gap-10 justify-between">
+                                        <div class="flex gap-4">
+                                            <figure class="w-[68px] h-[68px] rounded-full"><img
+                                                    src="/assets/image/avatar-68.png" alt="icon"></figure>
+                                            <div class="flex flex-col gap-2">
+                                                <p class="text-heading-h7 text-secondary">Mr. Frank Brauer</p>
+                                                <div class="flex items-center gap-1">
+                                                    <figure><img src="/assets/image/icon/star-yellow.svg" alt="icon">
+                                                    </figure>
+                                                    <figure><img src="/assets/image/icon/star-yellow.svg" alt="icon">
+                                                    </figure>
+                                                    <figure><img src="/assets/image/icon/star-yellow.svg" alt="icon">
+                                                    </figure>
+                                                    <figure><img src="/assets/image/icon/star-yellow.svg" alt="icon">
+                                                    </figure>
+                                                    <figure><img src="/assets/image/icon/star-yellow.svg" alt="icon">
+                                                    </figure>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="flex items-center gap-4">
+                                            <!-- đã like -->
+                                            <div class="flex items-center gap-1">
+                                                <figure><img src="/assets/image/icon/like-second.svg" alt=""></figure>
+                                                <p class="text-body-lg-regular text-secondary">22</p>
+                                            </div>
+                                            <!-- chưa like -->
+                                            <!-- <div class="flex items-center gap-1">
+                                                <figure><img src="/assets/image/icon/like-gray.svg" alt=""></figure>
+                                                <p class="text-body-lg-regular text-neutral-500">22</p>
+                                            </div> -->
+                                            <div class="flex items-center gap-1">
+                                                <figure><img src="/assets/image/icon/dislike-gray.svg" alt=""></figure>
+                                                <p class="text-body-lg-regular text-neutral-500">0</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="p-5 rounded-xl flex flex-col gap-4 border border-solid border-neutral-300">
+                                    <p class="text-body-lg-regular text-neutral-700">For Weight Gain: Take one or two
+                                        SureMeal™ Zero Sugar Original shakes between meals.
+                                        For added calories mix with whole milk or juice.</p>
+                                    <div
+                                        class="flex flex-col md:flex-row items-start lg:items-end gap-6 md:gap-10 justify-between">
+                                        <div class="flex gap-4">
+                                            <figure class="w-[68px] h-[68px] rounded-full"><img
+                                                    src="/assets/image/avatar-68.png" alt="icon"></figure>
+                                            <div class="flex flex-col gap-2">
+                                                <p class="text-heading-h7 text-secondary">Mr. Frank Brauer</p>
+                                                <div class="flex items-center gap-1">
+                                                    <figure><img src="/assets/image/icon/star-yellow.svg" alt="icon">
+                                                    </figure>
+                                                    <figure><img src="/assets/image/icon/star-yellow.svg" alt="icon">
+                                                    </figure>
+                                                    <figure><img src="/assets/image/icon/star-yellow.svg" alt="icon">
+                                                    </figure>
+                                                    <figure><img src="/assets/image/icon/star-yellow.svg" alt="icon">
+                                                    </figure>
+                                                    <figure><img src="/assets/image/icon/star-yellow.svg" alt="icon">
+                                                    </figure>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="flex items-center gap-4">
+                                            <!-- đã like -->
+                                            <div class="flex items-center gap-1">
+                                                <figure><img src="/assets/image/icon/like-second.svg" alt=""></figure>
+                                                <p class="text-body-lg-regular text-secondary">22</p>
+                                            </div>
+                                            <!-- chưa like -->
+                                            <!-- <div class="flex items-center gap-1">
+                                                <figure><img src="/assets/image/icon/like-gray.svg" alt=""></figure>
+                                                <p class="text-body-lg-regular text-neutral-500">22</p>
+                                            </div> -->
+                                            <div class="flex items-center gap-1">
+                                                <figure><img src="/assets/image/icon/dislike-gray.svg" alt=""></figure>
+                                                <p class="text-body-lg-regular text-neutral-500">0</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="p-5 rounded-xl flex flex-col gap-4 border border-solid border-neutral-300">
+                                    <p class="text-body-lg-regular text-neutral-700">For Weight Gain: Take one or two
+                                        SureMeal™ Zero Sugar Original shakes between meals.
+                                        For added calories mix with whole milk or juice.</p>
+                                    <div
+                                        class="flex flex-col md:flex-row items-start lg:items-end gap-6 md:gap-10 justify-between">
+                                        <div class="flex gap-4">
+                                            <figure class="w-[68px] h-[68px] rounded-full"><img
+                                                    src="/assets/image/avatar-68.png" alt="icon"></figure>
+                                            <div class="flex flex-col gap-2">
+                                                <p class="text-heading-h7 text-secondary">Mr. Frank Brauer</p>
+                                                <div class="flex items-center gap-1">
+                                                    <figure><img src="/assets/image/icon/star-yellow.svg" alt="icon">
+                                                    </figure>
+                                                    <figure><img src="/assets/image/icon/star-yellow.svg" alt="icon">
+                                                    </figure>
+                                                    <figure><img src="/assets/image/icon/star-yellow.svg" alt="icon">
+                                                    </figure>
+                                                    <figure><img src="/assets/image/icon/star-yellow.svg" alt="icon">
+                                                    </figure>
+                                                    <figure><img src="/assets/image/icon/star-yellow.svg" alt="icon">
+                                                    </figure>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="flex items-center gap-4">
+                                            <!-- đã like -->
+                                            <div class="flex items-center gap-1">
+                                                <figure><img src="/assets/image/icon/like-second.svg" alt=""></figure>
+                                                <p class="text-body-lg-regular text-secondary">22</p>
+                                            </div>
+                                            <!-- chưa like -->
+                                            <!-- <div class="flex items-center gap-1">
+                                                <figure><img src="/assets/image/icon/like-gray.svg" alt=""></figure>
+                                                <p class="text-body-lg-regular text-neutral-500">22</p>
+                                            </div> -->
+                                            <div class="flex items-center gap-1">
+                                                <figure><img src="/assets/image/icon/dislike-gray.svg" alt=""></figure>
+                                                <p class="text-body-lg-regular text-neutral-500">0</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="p-5 rounded-xl flex flex-col gap-4 border border-solid border-neutral-300">
+                                    <p class="text-body-lg-regular text-neutral-700">For Weight Gain: Take one or two
+                                        SureMeal™ Zero Sugar Original shakes between meals.
+                                        For added calories mix with whole milk or juice.</p>
+                                    <div
+                                        class="flex flex-col md:flex-row items-start lg:items-end gap-6 md:gap-10 justify-between">
+                                        <div class="flex gap-4">
+                                            <figure class="w-[68px] h-[68px] rounded-full"><img
+                                                    src="/assets/image/avatar-68.png" alt="icon"></figure>
+                                            <div class="flex flex-col gap-2">
+                                                <p class="text-heading-h7 text-secondary">Mr. Frank Brauer</p>
+                                                <div class="flex items-center gap-1">
+                                                    <figure><img src="/assets/image/icon/star-yellow.svg" alt="icon">
+                                                    </figure>
+                                                    <figure><img src="/assets/image/icon/star-yellow.svg" alt="icon">
+                                                    </figure>
+                                                    <figure><img src="/assets/image/icon/star-yellow.svg" alt="icon">
+                                                    </figure>
+                                                    <figure><img src="/assets/image/icon/star-yellow.svg" alt="icon">
+                                                    </figure>
+                                                    <figure><img src="/assets/image/icon/star-yellow.svg" alt="icon">
+                                                    </figure>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="flex items-center gap-4">
+                                            <!-- đã like -->
+                                            <div class="flex items-center gap-1">
+                                                <figure><img src="/assets/image/icon/like-second.svg" alt=""></figure>
+                                                <p class="text-body-lg-regular text-secondary">22</p>
+                                            </div>
+                                            <!-- chưa like -->
+                                            <!-- <div class="flex items-center gap-1">
+                                                <figure><img src="/assets/image/icon/like-gray.svg" alt=""></figure>
+                                                <p class="text-body-lg-regular text-neutral-500">22</p>
+                                            </div> -->
+                                            <div class="flex items-center gap-1">
+                                                <figure><img src="/assets/image/icon/dislike-gray.svg" alt=""></figure>
+                                                <p class="text-body-lg-regular text-neutral-500">0</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="p-5 rounded-xl flex flex-col gap-4 border border-solid border-neutral-300">
+                                    <p class="text-body-lg-regular text-neutral-700">For Weight Gain: Take one or two
+                                        SureMeal™ Zero Sugar Original shakes between meals.
+                                        For added calories mix with whole milk or juice.</p>
+                                    <div
+                                        class="flex flex-col md:flex-row items-start lg:items-end gap-6 md:gap-10 justify-between">
+                                        <div class="flex gap-4">
+                                            <figure class="w-[68px] h-[68px] rounded-full"><img
+                                                    src="/assets/image/avatar-68.png" alt="icon"></figure>
+                                            <div class="flex flex-col gap-2">
+                                                <p class="text-heading-h7 text-secondary">Mr. Frank Brauer</p>
+                                                <div class="flex items-center gap-1">
+                                                    <figure><img src="/assets/image/icon/star-yellow.svg" alt="icon">
+                                                    </figure>
+                                                    <figure><img src="/assets/image/icon/star-yellow.svg" alt="icon">
+                                                    </figure>
+                                                    <figure><img src="/assets/image/icon/star-yellow.svg" alt="icon">
+                                                    </figure>
+                                                    <figure><img src="/assets/image/icon/star-yellow.svg" alt="icon">
+                                                    </figure>
+                                                    <figure><img src="/assets/image/icon/star-yellow.svg" alt="icon">
+                                                    </figure>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="flex items-center gap-4">
+                                            <!-- đã like -->
+                                            <div class="flex items-center gap-1">
+                                                <figure><img src="/assets/image/icon/like-second.svg" alt=""></figure>
+                                                <p class="text-body-lg-regular text-secondary">22</p>
+                                            </div>
+                                            <!-- chưa like -->
+                                            <!-- <div class="flex items-center gap-1">
+                                                <figure><img src="/assets/image/icon/like-gray.svg" alt=""></figure>
+                                                <p class="text-body-lg-regular text-neutral-500">22</p>
+                                            </div> -->
+                                            <div class="flex items-center gap-1">
+                                                <figure><img src="/assets/image/icon/dislike-gray.svg" alt=""></figure>
+                                                <p class="text-body-lg-regular text-neutral-500">0</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="p-5 rounded-xl flex flex-col gap-4 border border-solid border-neutral-300">
+                                    <p class="text-body-lg-regular text-neutral-700">For Weight Gain: Take one or two
+                                        SureMeal™ Zero Sugar Original shakes between meals.
+                                        For added calories mix with whole milk or juice.</p>
+                                    <div
+                                        class="flex flex-col md:flex-row items-start lg:items-end gap-6 md:gap-10 justify-between">
+                                        <div class="flex gap-4">
+                                            <figure class="w-[68px] h-[68px] rounded-full"><img
+                                                    src="/assets/image/avatar-68.png" alt="icon"></figure>
+                                            <div class="flex flex-col gap-2">
+                                                <p class="text-heading-h7 text-secondary">Mr. Frank Brauer</p>
+                                                <div class="flex items-center gap-1">
+                                                    <figure><img src="/assets/image/icon/star-yellow.svg" alt="icon">
+                                                    </figure>
+                                                    <figure><img src="/assets/image/icon/star-yellow.svg" alt="icon">
+                                                    </figure>
+                                                    <figure><img src="/assets/image/icon/star-yellow.svg" alt="icon">
+                                                    </figure>
+                                                    <figure><img src="/assets/image/icon/star-yellow.svg" alt="icon">
+                                                    </figure>
+                                                    <figure><img src="/assets/image/icon/star-yellow.svg" alt="icon">
+                                                    </figure>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="flex items-center gap-4">
+                                            <!-- đã like -->
+                                            <div class="flex items-center gap-1">
+                                                <figure><img src="/assets/image/icon/like-second.svg" alt=""></figure>
+                                                <p class="text-body-lg-regular text-secondary">22</p>
+                                            </div>
+                                            <!-- chưa like -->
+                                            <!-- <div class="flex items-center gap-1">
+                                                <figure><img src="/assets/image/icon/like-gray.svg" alt=""></figure>
+                                                <p class="text-body-lg-regular text-neutral-500">22</p>
+                                            </div> -->
+                                            <div class="flex items-center gap-1">
+                                                <figure><img src="/assets/image/icon/dislike-gray.svg" alt=""></figure>
+                                                <p class="text-body-lg-regular text-neutral-500">0</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="p-5 rounded-xl flex flex-col gap-4 border border-solid border-neutral-300">
+                                    <p class="text-body-lg-regular text-neutral-700">For Weight Gain: Take one or two
+                                        SureMeal™ Zero Sugar Original shakes between meals.
+                                        For added calories mix with whole milk or juice.</p>
+                                    <div
+                                        class="flex flex-col md:flex-row items-start lg:items-end gap-6 md:gap-10 justify-between">
+                                        <div class="flex gap-4">
+                                            <figure class="w-[68px] h-[68px] rounded-full"><img
+                                                    src="/assets/image/avatar-68.png" alt="icon"></figure>
+                                            <div class="flex flex-col gap-2">
+                                                <p class="text-heading-h7 text-secondary">Mr. Frank Brauer</p>
+                                                <div class="flex items-center gap-1">
+                                                    <figure><img src="/assets/image/icon/star-yellow.svg" alt="icon">
+                                                    </figure>
+                                                    <figure><img src="/assets/image/icon/star-yellow.svg" alt="icon">
+                                                    </figure>
+                                                    <figure><img src="/assets/image/icon/star-yellow.svg" alt="icon">
+                                                    </figure>
+                                                    <figure><img src="/assets/image/icon/star-yellow.svg" alt="icon">
+                                                    </figure>
+                                                    <figure><img src="/assets/image/icon/star-yellow.svg" alt="icon">
+                                                    </figure>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="flex items-center gap-4">
+                                            <!-- đã like -->
+                                            <div class="flex items-center gap-1">
+                                                <figure><img src="/assets/image/icon/like-second.svg" alt=""></figure>
+                                                <p class="text-body-lg-regular text-secondary">22</p>
+                                            </div>
+                                            <!-- chưa like -->
+                                            <!-- <div class="flex items-center gap-1">
+                                                <figure><img src="/assets/image/icon/like-gray.svg" alt=""></figure>
+                                                <p class="text-body-lg-regular text-neutral-500">22</p>
+                                            </div> -->
+                                            <div class="flex items-center gap-1">
+                                                <figure><img src="/assets/image/icon/dislike-gray.svg" alt=""></figure>
+                                                <p class="text-body-lg-regular text-neutral-500">0</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="p-5 rounded-xl flex flex-col gap-4 border border-solid border-neutral-300">
+                                    <p class="text-body-lg-regular text-neutral-700">For Weight Gain: Take one or two
+                                        SureMeal™ Zero Sugar Original shakes between meals.
+                                        For added calories mix with whole milk or juice.</p>
+                                    <div
+                                        class="flex flex-col md:flex-row items-start lg:items-end gap-6 md:gap-10 justify-between">
+                                        <div class="flex gap-4">
+                                            <figure class="w-[68px] h-[68px] rounded-full"><img
+                                                    src="/assets/image/avatar-68.png" alt="icon"></figure>
+                                            <div class="flex flex-col gap-2">
+                                                <p class="text-heading-h7 text-secondary">Mr. Frank Brauer</p>
+                                                <div class="flex items-center gap-1">
+                                                    <figure><img src="/assets/image/icon/star-yellow.svg" alt="icon">
+                                                    </figure>
+                                                    <figure><img src="/assets/image/icon/star-yellow.svg" alt="icon">
+                                                    </figure>
+                                                    <figure><img src="/assets/image/icon/star-yellow.svg" alt="icon">
+                                                    </figure>
+                                                    <figure><img src="/assets/image/icon/star-yellow.svg" alt="icon">
+                                                    </figure>
+                                                    <figure><img src="/assets/image/icon/star-yellow.svg" alt="icon">
+                                                    </figure>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="flex items-center gap-4">
+                                            <!-- đã like -->
+                                            <div class="flex items-center gap-1">
+                                                <figure><img src="/assets/image/icon/like-second.svg" alt=""></figure>
+                                                <p class="text-body-lg-regular text-secondary">22</p>
+                                            </div>
+                                            <!-- chưa like -->
+                                            <!-- <div class="flex items-center gap-1">
+                                                <figure><img src="/assets/image/icon/like-gray.svg" alt=""></figure>
+                                                <p class="text-body-lg-regular text-neutral-500">22</p>
+                                            </div> -->
+                                            <div class="flex items-center gap-1">
+                                                <figure><img src="/assets/image/icon/dislike-gray.svg" alt=""></figure>
+                                                <p class="text-body-lg-regular text-neutral-500">0</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="p-5 rounded-xl flex flex-col gap-4 border border-solid border-neutral-300">
+                                    <p class="text-body-lg-regular text-neutral-700">For Weight Gain: Take one or two
+                                        SureMeal™ Zero Sugar Original shakes between meals.
+                                        For added calories mix with whole milk or juice.</p>
+                                    <div
+                                        class="flex flex-col md:flex-row items-start lg:items-end gap-6 md:gap-10 justify-between">
+                                        <div class="flex gap-4">
+                                            <figure class="w-[68px] h-[68px] rounded-full"><img
+                                                    src="/assets/image/avatar-68.png" alt="icon"></figure>
+                                            <div class="flex flex-col gap-2">
+                                                <p class="text-heading-h7 text-secondary">Mr. Frank Brauer</p>
+                                                <div class="flex items-center gap-1">
+                                                    <figure><img src="/assets/image/icon/star-yellow.svg" alt="icon">
+                                                    </figure>
+                                                    <figure><img src="/assets/image/icon/star-yellow.svg" alt="icon">
+                                                    </figure>
+                                                    <figure><img src="/assets/image/icon/star-yellow.svg" alt="icon">
+                                                    </figure>
+                                                    <figure><img src="/assets/image/icon/star-yellow.svg" alt="icon">
+                                                    </figure>
+                                                    <figure><img src="/assets/image/icon/star-yellow.svg" alt="icon">
+                                                    </figure>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="flex items-center gap-4">
+                                            <!-- đã like -->
+                                            <div class="flex items-center gap-1">
+                                                <figure><img src="/assets/image/icon/like-second.svg" alt=""></figure>
+                                                <p class="text-body-lg-regular text-secondary">22</p>
+                                            </div>
+                                            <!-- chưa like -->
+                                            <!-- <div class="flex items-center gap-1">
+                                                <figure><img src="/assets/image/icon/like-gray.svg" alt=""></figure>
+                                                <p class="text-body-lg-regular text-neutral-500">22</p>
+                                            </div> -->
+                                            <div class="flex items-center gap-1">
+                                                <figure><img src="/assets/image/icon/dislike-gray.svg" alt=""></figure>
+                                                <p class="text-body-lg-regular text-neutral-500">0</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="recent-button button button-trans text-body-md-semibold text-secondary">
+                                <figure class="w-6 h-6"><img src="/assets/image/icon/double-chev-down-20-second.svg"
+                                        alt="icon"></figure>
+                                <span>View more reviews</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
 
         <section class="py-20">
             <div class="container flex flex-col gap-6">
@@ -723,14 +1495,14 @@
                     loopedSlides: 2,
                 },
                 640: {
-                    slidesPerView: 3,
+                    slidesPerView: 2,
                     spaceBetween: 10,
-                    loopedSlides: 3,
+                    loopedSlides: 2,
                 },
                 1024: {
-                    slidesPerView: 4,
+                    slidesPerView: 3,
                     spaceBetween: 24,
-                    loopedSlides: 4,
+                    loopedSlides: 3,
                 }
             }
         });
@@ -750,10 +1522,10 @@
                     loopedSlides: 1,
                 },
                 640: {
-                    loopedSlides: 3,
+                    loopedSlides: 2,
                 },
                 1024: {
-                    loopedSlides: 4,
+                    loopedSlides: 3,
                 }
             },
         });
@@ -794,7 +1566,6 @@
             }
         });
     </script>
-
 
     <!-- script filter -->
     <script defer>
@@ -837,11 +1608,90 @@
             });
         });
     </script>
+
+    <!-- description js -->
+    <script defer>
+        // Lấy tất cả các tab và view
+        const tabs = document.querySelectorAll('.description-tab');
+        const views = document.querySelectorAll('.description-view');
+
+        // Thêm sự kiện click cho mỗi tab
+        tabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                // Xóa class 'active' khỏi tất cả các tab và ẩn các view
+                tabs.forEach(t => t.classList.remove('active'));
+                views.forEach(view => view.classList.add('hidden'));
+
+                // Thêm class 'active' vào tab được nhấp
+                tab.classList.add('active');
+
+                // Hiển thị view tương ứng với tab được nhấp
+                const viewId = tab.getAttribute('data-tab');
+                document.getElementById(viewId).classList.remove('hidden');
+            });
+        });
+
+    </script>
+
+    <!-- comment js -->
+    <script defer>
+        // Chọn tất cả các phần tử có class "comment-choose"
+        const commentOptions = document.querySelectorAll('.comment-choose');
+
+        // Thêm sự kiện click cho từng phần tử
+        commentOptions.forEach(option => {
+            option.addEventListener('click', () => {
+                // Xóa class 'active' khỏi tất cả các phần tử
+                commentOptions.forEach(o => o.classList.remove('active'));
+
+                // Thêm class 'active' vào phần tử được nhấp
+                option.classList.add('active');
+            });
+        });
+
+
+    </script>
+
+    <!-- script review -->
+    <script defer>
+        // Chọn phần tử recent-view và recent-button
+        const recentView = document.querySelector('.recent-view');
+        const recentButton = document.querySelector('.recent-button');
+        const recentButtonText = recentButton.querySelector('span');
+        const recentButtonIcon = recentButton.querySelector('figure');
+
+        // Thêm sự kiện click vào recent-button
+        recentButton.addEventListener('click', () => {
+            // Kiểm tra xem recent-view có đang ở chế độ mở rộng hay không
+            if (recentView.classList.contains('expanded')) {
+                // Đặt lại max-height và overflow ban đầu
+                recentView.classList.remove('expanded');
+                recentView.style.maxHeight = '700px';
+                recentView.style.overflowY = 'hidden';
+
+                // Cập nhật text và xoay icon trở lại ban đầu
+                recentButtonText.textContent = 'View more reviews';
+                recentButtonIcon.style.transform = 'rotate(0deg)';
+            } else {
+                // Mở rộng max-height và cho phép cuộn
+                recentView.classList.add('expanded');
+                recentView.style.maxHeight = '1200px';
+                recentView.style.overflowY = 'auto';
+
+                // Cập nhật text và xoay icon 180 độ
+                recentButtonText.textContent = 'View less';
+                recentButtonIcon.style.transform = 'rotate(180deg)';
+            }
+        });
+
+    </script>
     <!-- ranger picker -->
     <script defer src="/assets/js/ranger-select.js"></script>
 
     <!-- header script -->
     <script defer src="/assets/js/header.js"></script>
+
+    <script defer src="/assets/js/quantity-choose.js"></script>
 </body>
 
 </html>
