@@ -219,7 +219,80 @@
 
         <section class="pb-20">
             <div class="container">
-                123
+                <div class="w-full flex flex-col lg:flex-row gap-6">
+                    <div class="flex-1 flex flex-col gap-3 max-w-[900px]">
+                        <div class="w-full flex gap-6 items-center justify-between px-6 py-4 rounded-t-xl bg-white">
+                            <label class="custom-checkbox">
+                                <div class="checkbox-container">
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                </div>
+                                <p class="text-body-md-medium text-gray-9">Select all (3)</p>
+                            </label>
+
+                            <button class="button bg-trans">
+                                <figure class="w-6 h-6"><img src="/assets/image/icon/trash.svg" alt="icon"></figure>
+                            </button>
+                        </div>
+                        <!-- item select -->
+                        <div class="w-full flex gap-6 items-center p-6 rounded-xl bg-white">
+                            <label class="custom-checkbox">
+                                <div class="checkbox-container">
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                </div>
+                            </label>
+
+                            <div class="flex w-2/3 max-w-[454px] items-center gap-5">
+                                <figure class="w-[100px] h-[100px] rounded-xl border border-solid border-neutral-200">
+                                    <img src="/assets/image/product/cart-item.png" alt="item">
+                                </figure>
+                                <div class="flex-1 flex flex-col gap-2">
+                                    <h2 class="text-body-md-medium text-gray-8">SureMeal™ Vital - Immune Builder
+                                        Enhanced Collagen, Biotin & HA</h2>
+                                    <select class="input-neutral-200 text-body-sm-regular text-gray-7">
+                                        <option value="">Type: 3 Pack</option>
+                                        <option value="">Type: 4 Pack</option>
+                                        <option value="">Type: 5 Pack</option>
+                                        <option value="">Type: 6 Pack</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="min-w-[143px] flex flex-col justify-end gap-1">
+                                <p class="text-body-md-medium text-primary">$96.00 USD</p>
+                                <p class="line-through text-body-sm-regular text-neutral-500">$120.00 USD</p>
+                            </div>
+
+                            <div
+                                class="counter flex items-center justify-center w-[110px] h-10 border border-solid border-[#eee] rounded-lg text-body-sm-medium text-[#121138]">
+                                <button class="decrement px-3 py-1">−</button>
+                                <input type="text" value="1" readonly
+                                    class="quantity w-8 text-center focus:outline-none" />
+                                <button class="increment px-3 py-1">+</button>
+                            </div>
+
+                            <button class="button bg-trans">
+                                <figure class="w-6 h-6"><img src="/assets/image/icon/trash.svg" alt="icon"></figure>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col gap-4 w-full lg:max-w-[437px]">
+                        <div
+                            class="select-offer flex items-center gap-6 justify-between px-6 py-4 rounded-t-xl bg-white">
+                            <div class="flex items-center gap-3">
+                                <figure class="w-6 h-6"><img src="/assets/image/icon/ticket-sale-primary.svg"
+                                        alt="icon">
+                                </figure>
+                                <p class="text-body-md-medium text-gray-9">Select or enter an offer</p>
+                            </div>
+                            <button class="button bg-trans">
+                                <figure class=""><img src="/assets/image/icon/chev-up-24.svg" alt="icon"></figure>
+                            </button>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
     </main>
@@ -403,226 +476,10 @@
         </div>
     </footer>
 
-
-    <!-- swiper script -->
-    <script>
-        var galleryThumbs = new Swiper('.slider-galeria-thumbs', {
-            speed: 1000,
-            loop: true,
-            autoplay: {
-                delay: 3000,
-            },
-
-            slideToClickedSlide: true,
-            // next and prev buttons
-            navigation: {
-                nextEl: '.button-next',
-                prevEl: '.button-prev',
-            },
-            breakpoints: {
-                0: {
-                    slidesPerView: 1,
-                    spaceBetween: 10,
-                    loopedSlides: 2,
-                },
-                640: {
-                    slidesPerView: 2,
-                    spaceBetween: 10,
-                    loopedSlides: 2,
-                },
-                1024: {
-                    slidesPerView: 3,
-                    spaceBetween: 24,
-                    loopedSlides: 3,
-                }
-            }
-        });
-
-        var galleryTop = new Swiper('.slider-galeria', {
-            slidesPerView: 1,
-            spaceBetween: 20,
-            speed: 1000,
-            loop: true,
-            loopedSlides: 4,
-            breakpoints: {
-                0: {
-                    navigation: {
-                        nextEl: '.button-next',
-                        prevEl: '.button-prev',
-                    },
-                    loopedSlides: 1,
-                },
-                640: {
-                    loopedSlides: 2,
-                },
-                1024: {
-                    loopedSlides: 3,
-                }
-            },
-        });
-        galleryTop.controller.control = galleryThumbs;
-        galleryThumbs.controller.control = galleryTop;
-        $('.btn-minus').addClass('disabled');
-        $('.btn-plus').click(function () {
-            var value = parseInt($(this).prev('input').val());
-            // bỏ disabled
-            $('.btn-minus').removeClass('disabled');
-            $(this).prev('input').val(value + 1);
-        });
-        $('.btn-minus').click(function () {
-            var value = parseInt($(this).next('input').val());
-            if (value > 1) {
-                $(this).next('input').val(value - 1);
-            }
-            if (value == 2) {
-                $(this).addClass('disabled');
-            }
-        });
-        $(document).ready(function () {
-            var value = $('#soluong').val();
-            $(window).scroll(function () {
-                if ($(window).scrollTop() > $('.section-1-device-detail').height() + 200) {
-                    $('.col-right').addClass('fixed');
-                } else {
-                    $('.col-right').removeClass('fixed');
-                }
-                if ($(window).scrollTop() + $(window).height() > $(document).height() - 1200) {
-                    $('.col-right').addClass('fixed-bot');
-                } else {
-                    $('.col-right').removeClass('fixed-bot');
-                }
-            });
-            if ($('.list-device .item').length > 3) {
-                $('.list-device').css('max-width', '54rem');
-            }
-        });
-    </script>
-
-    <!-- script filter -->
-    <script defer>
-        document.querySelectorAll('.collapse-title').forEach((title) => {
-            title.addEventListener('click', () => {
-                const item = title.nextElementSibling; // Giả sử item ngay sau title
-                const button = title.querySelector('.collapse-button');
-
-                // Toggle class collapse cho item
-                item.classList.toggle('collapsed');
-
-                // Xoay button 180 độ
-                if (item.classList.contains('collapse')) {
-                    button.style.transform = 'rotate(180deg)';
-                } else {
-                    button.style.transform = 'rotate(0deg)';
-                }
-            });
-        });
-
-        document.querySelectorAll('.collapse-check-list').forEach(collapseCheckList => {
-            collapseCheckList.addEventListener('click', () => {
-                const collapseItem = collapseCheckList.closest('.collapse-item');
-                const checkList = collapseItem.querySelector('.check-list');
-                const collapseCheckButton = collapseItem.querySelector('.collapse-check-button');
-                const moreText = collapseCheckList.querySelector('.more');
-                const lessText = collapseCheckList.querySelector('.less');
-
-                // Toggle the collapse class on check-list
-                checkList.classList.toggle('collapsed');
-
-                // Rotate the button 180 degrees
-                collapseCheckButton.style.transform = collapseCheckButton.style.transform === 'rotate(180deg)' ? 'rotate(0deg)' : 'rotate(180deg)';
-
-                // Toggle the more and less text visibility
-                if (moreText && lessText) {
-                    moreText.classList.toggle('hidden');
-                    lessText.classList.toggle('hidden');
-                }
-            });
-        });
-    </script>
-
-    <!-- description js -->
-    <script defer>
-        // Lấy tất cả các tab và view
-        const tabs = document.querySelectorAll('.description-tab');
-        const views = document.querySelectorAll('.description-view');
-
-        // Thêm sự kiện click cho mỗi tab
-        tabs.forEach(tab => {
-            tab.addEventListener('click', () => {
-                // Xóa class 'active' khỏi tất cả các tab và ẩn các view
-                tabs.forEach(t => t.classList.remove('active'));
-                views.forEach(view => view.classList.add('hidden'));
-
-                // Thêm class 'active' vào tab được nhấp
-                tab.classList.add('active');
-
-                // Hiển thị view tương ứng với tab được nhấp
-                const viewId = tab.getAttribute('data-tab');
-                document.getElementById(viewId).classList.remove('hidden');
-            });
-        });
-
-    </script>
-
-    <!-- comment js -->
-    <script defer>
-        // Chọn tất cả các phần tử có class "comment-choose"
-        const commentOptions = document.querySelectorAll('.comment-choose');
-
-        // Thêm sự kiện click cho từng phần tử
-        commentOptions.forEach(option => {
-            option.addEventListener('click', () => {
-                // Xóa class 'active' khỏi tất cả các phần tử
-                commentOptions.forEach(o => o.classList.remove('active'));
-
-                // Thêm class 'active' vào phần tử được nhấp
-                option.classList.add('active');
-            });
-        });
-
-
-    </script>
-
-    <!-- script review -->
-    <script defer>
-        // Chọn phần tử recent-view và recent-button
-        const recentView = document.querySelector('.recent-view');
-        const recentButton = document.querySelector('.recent-button');
-        const recentButtonText = recentButton.querySelector('span');
-        const recentButtonIcon = recentButton.querySelector('figure');
-
-        // Thêm sự kiện click vào recent-button
-        recentButton.addEventListener('click', () => {
-            // Kiểm tra xem recent-view có đang ở chế độ mở rộng hay không
-            if (recentView.classList.contains('expanded')) {
-                // Đặt lại max-height và overflow ban đầu
-                recentView.classList.remove('expanded');
-                recentView.style.maxHeight = '700px';
-                recentView.style.overflowY = 'hidden';
-
-                // Cập nhật text và xoay icon trở lại ban đầu
-                recentButtonText.textContent = 'View more reviews';
-                recentButtonIcon.style.transform = 'rotate(0deg)';
-            } else {
-                // Mở rộng max-height và cho phép cuộn
-                recentView.classList.add('expanded');
-                recentView.style.maxHeight = '1200px';
-                recentView.style.overflowY = 'auto';
-
-                // Cập nhật text và xoay icon 180 độ
-                recentButtonText.textContent = 'View less';
-                recentButtonIcon.style.transform = 'rotate(180deg)';
-            }
-        });
-
-    </script>
-    <!-- ranger picker -->
-    <script defer src="/assets/js/ranger-select.js"></script>
-
     <!-- header script -->
     <script defer src="/assets/js/header.js"></script>
 
-    <script defer src="/assets/js/quantity-choose.js"></script>
+    <script defer src="/assets/js/quantity-plus-minus.js"></script>
 </body>
 
 </html>

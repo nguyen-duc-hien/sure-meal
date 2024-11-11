@@ -1,3 +1,4 @@
+@charset "UTF-8";
 html,
 body,
 section,
@@ -926,7 +927,7 @@ input.filter-search:focus {
   /* Remove default arrow */
   -webkit-appearance: none;
   -moz-appearance: none;
-  background: url("../image/icon/triangle-down.svg") no-repeat right 16px center;
+  background: url("../image/icon/chev-down-16.svg") no-repeat right 16px center;
   background-size: 16px 16px;
 }
 .input-label .input-trans {
@@ -943,7 +944,7 @@ input.filter-search:focus {
   /* Remove default arrow */
   -webkit-appearance: none;
   -moz-appearance: none;
-  background: url("../../assets/image/icon/triangle-down.svg") no-repeat right 0 center;
+  background: url("../../assets/image/icon/chev-down-16.svg") no-repeat right 0 center;
 }
 
 .w-50-g-10 {
@@ -953,6 +954,21 @@ input.filter-search:focus {
   .w-50-g-10 {
     width: 100%;
   }
+}
+
+select.input-neutral-200 {
+  width: -moz-fit-content;
+  width: fit-content;
+  appearance: none;
+  padding: 8px 36px 8px 12px;
+  border-radius: 8px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-color: #f3f4f6; /* Màu nền */
+  background-image: url("../image/icon/chev-down-16.svg"); /* Hình nền */
+  background-repeat: no-repeat;
+  background-position: right 16px center;
+  background-size: 16px 16px;
 }
 
 .button {
