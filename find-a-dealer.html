@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Frequently Asked Question</title>
+    <title>Find a Dealer</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="/assets/js/tailwind.config.js"></script>
     <!-- custom css -->
@@ -186,7 +186,7 @@
     </header>
 
     <main class="bg-[#EEF0F6]">
-        <section class="py-6">
+        <section class="pt-6 pb-10">
             <div class="container">
                 <nav class="breadcrumb text-body-md-medium text-gray-8" aria-label="breadcrumb">
                     <!-- Sử dụng schema.org để định nghĩa breadcrumb list -->
@@ -213,104 +213,193 @@
                         </li>
                     </ol>
                 </nav>
+                <div class="mt-4">
+                    <h1 class="text-heading-h2 text-[#191C1F]">Find a Dealer</h1>
+                </div>
             </div>
         </section>
 
-        <section class="pt-6 lg:pt-10 pb-6 lg:pb-20">
-            <div class="container">
-                <div class="flex justify-center">
-                    <div class="max-w-[884px] flex flex-col items-center gap-2">
-                        <h1 class="text-heading-h2 text-[#191C1F] text-center">Frequently Asked Question</h1>
-                        <p class="text-body-lg-regular text-gray-9 text-center">Welcome to our FAQ page! We’re compiled
-                            a
-                            list of commonly asked questions to provide you with quick and informative answers.</p>
-                    </div>
-                </div>
-                <div class="mt-20">
-                    <div class="flex flex-col lg:flex-row w-full gap-6 justify-between">
-                        <div class="flex flex-wrap gap-3">
-                            <div class="text-body-md-medium tab-item active">General</div>
-                            <div class="text-body-md-medium tab-item">Health</div>
-                        </div>
-                        <input type="text" class="home-search radius-8 xl:max-w-[200px] 2xl:max-w-[386px]"
-                            placeholder="Search by keywords" />
-                    </div>
-                </div>
-                <div class="flex flex-col lg:flex-row gap-6 mt-6 lg:mt-20">
-                    <div class="accorditions-list flex flex-col gap-3">
-                        <div class="accorditions-list-item bg-white p-6 rounded-xl">
-                            <button
-                                class="accordion w-full flex justify-between items-center border border-color-[#E5E7EB]">
-                                <span class="text-body-xl-medium">Section 1</span>
-                                <img src="./assets/image/icon/chev-down-16.svg" alt="" />
-                            </button>
-                            <div class="panel transition-max-height duration-200 ease-out overflow-hidden max-h-[0]">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-                                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                                    exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                            </div>
-                        </div>
-                        <div class="accorditions-list-item bg-white p-6 rounded-xl">
-                            <button
-                                class="accordion w-full flex justify-between items-center border border-color-[#E5E7EB]">
-                                <span class="text-body-xl-medium">Section 1</span>
-                                <img src="./assets/image/icon/chev-down-16.svg" alt="" />
-                            </button>
-                            <div class="panel transition-max-height duration-200 ease-out overflow-hidden max-h-[0]">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-                                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                                    exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                            </div>
-                        </div>
-                        <div class="accorditions-list-item bg-white p-6 rounded-xl">
-                            <button
-                                class="accordion w-full flex justify-between items-center border border-color-[#E5E7EB]">
-                                <span class="text-body-xl-medium">Section 1</span>
-                                <img src="./assets/image/icon/chev-down-16.svg" alt="" />
-                            </button>
-                            <div class="panel transition-max-height duration-200 ease-out overflow-hidden max-h-[0]">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-                                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                                    exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="w-full flex flex-col gap-6 rounded-[20px] bg-white p-8 max-w-[461px]">
-                        <div class="flex flex-col gap-2">
-                            <h2 class="text-heading-h6 text-neutral-700">Any question?</h2>
-                            <span class="text-neutral-500">Our support agents are ready with the answer.</span>
-                        </div>
+        <style>
+            .tab-find {
+                width: 50%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 8px 16px 12px 8px;
+                border-bottom: 2px solid transparent;
+                color: #6B7280;
+            }
 
-                        <form action="" class="flex flex-col gap-4">
-                            <label class="input-label">
-                                <p class="input-title">First name <span class="text-primary">*</span></p>
-                                <input type="text" class="input-field" placeholder="Enter your first name
-                                " />
-                            </label>
-                            <label class="input-label">
-                                <p class="input-title">Last name <span class="text-primary">*</span></p>
-                                <input type="text" class="input-field" placeholder="Enter your last name
-                                " />
-                            </label>
-                            <label class="input-label">
-                                <p class="input-title">Email <span class="text-primary">*</span></p>
-                                <input type="text" class="input-field" placeholder="Enter your email
-                                " />
-                            </label>
-                            <label class="input-label">
-                                <p class="input-title">Phone number <span class="text-primary">*</span></p>
-                                <input type="text" class="input-field" placeholder="Enter your phone number
-                                " />
-                            </label>
-                            <label class="input-label">
-                                <p class="input-title">Message <span class="text-primary">*</span></p>
-                                <textarea type="text" class="input-field" rows="5" placeholder="Enter your email
-                                "></textarea>
-                            </label>
-                            <button class="w-full button bg-primary text-body-md-semibold text-white">Send
-                                question</button>
-                        </form>
+            .tab-find:hover {
+                font-weight: bold;
+                color: #0E74BC;
+                border-bottom: 2px solid #0E74BC;
+            }
+
+            .tab-find.active {
+                font-weight: bold;
+                color: #0E74BC;
+                border-bottom: 2px solid #0E74BC;
+            }
+
+            .tab-find-view {
+                display: flex;
+                flex-direction: column;
+                padding: 24px;
+                padding-bottom: 20px;
+                gap: 24px;
+                background: #FFF;
+            }
+
+            .iframe-container {
+                position: relative;
+                width: 100%;
+                padding-top: calc(29 / 74 * 100%);
+                /* Giữ tỷ lệ 74:29 */
+                /* max-height: 638px; */
+            }
+
+            .iframe-container iframe {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+            }
+        </style>
+        <section class="pb-6 lg:pb-20">
+            <div class="container">
+                <div class="flex flex-col lg:flex-row gap-6">
+                    <div class="w-full lg:max-w-[553px]">
+                        <div class="w-full rounded-xl bg-white">
+                            <div class="flex items-center pt-2">
+                                <div class="tab-find text-body-md-regular active">
+                                    Find a Dealer
+                                </div>
+                                <div class="tab-find text-body-md-regular">
+                                    Dealer near your location
+                                </div>
+                            </div>
+                            <div class="tab-find-view">
+                                <input type="text" class="home-search" placeholder="Search location">
+
+                                <div class="w-full relative flex items-center">
+                                    <hr class="divider">
+                                    <span class="flex-shrink mx-3 text-body-sm-regular text-neutral-500">Or</span>
+                                    <hr class="divider">
+                                </div>
+
+                                <div class="flex flex-col gap-3">
+                                    <label class="input-label">
+                                        <!-- <p class="input-title">Email <span class="text-primary">*</span></p> -->
+                                        <select class="input-field">
+                                            <option value="">Arkansas State</option>
+                                            <option value="">Arkansas State 2</option>
+                                            <option value="">Arkansas State 3</option>
+                                            <option value="">Arkansas State 4</option>
+                                            <option value="">Arkansas State 5</option>
+                                        </select>
+                                    </label>
+                                    <label class="input-label">
+                                        <!-- <p class="input-title">Email <span class="text-primary">*</span></p> -->
+                                        <select class="input-field">
+                                            <option value="">Fort Smith City</option>
+                                            <option value="">Fort Smith City 2</option>
+                                            <option value="">Fort Smith City 3</option>
+                                            <option value="">Fort Smith City 4</option>
+                                            <option value="">Fort Smith City 5</option>
+                                        </select>
+                                    </label>
+                                </div>
+
+                                <div class="p-5 flex flex-col gap-6 rounded-xl border border-solid border-neutral-200">
+                                    <p class="text-body-md-medium text-gray-9">There are 6 dealerships in Fort Smith,
+                                        Arkansas.</p>
+
+                                    <div class="">
+                                        <label
+                                            class="cursor-pointer py-4 flex gap-4 items-center border-b border-solid border-neutral-200">
+                                            <input type="radio" name="bill" class="radio-blue">
+                                            <div class="flex flex-col gap-1">
+                                                <h2 class="text-body-md-mdeium text-gray-8">Minh Ngoc Jewelry Store</h2>
+                                                <p class="text-body-md-regular text-neutral-500">2304 Rogers Ave. <br>
+                                                    Fort Smith AR 72901</p>
+                                            </div>
+                                        </label>
+                                        <label
+                                            class="cursor-pointer py-4 flex gap-4 items-center border-b border-solid border-neutral-200">
+                                            <input type="radio" name="bill" class="radio-blue">
+                                            <div class="flex flex-col gap-1">
+                                                <h2 class="text-body-md-mdeium text-gray-8">Minh Ngoc Jewelry Store</h2>
+                                                <p class="text-body-md-regular text-neutral-500">2304 Rogers Ave. <br>
+                                                    Fort Smith AR 72901</p>
+                                            </div>
+                                        </label>
+                                        <label
+                                            class="cursor-pointer py-4 flex gap-4 items-center border-b border-solid border-neutral-200">
+                                            <input type="radio" name="bill" class="radio-blue">
+                                            <div class="flex flex-col gap-1">
+                                                <h2 class="text-body-md-mdeium text-gray-8">Minh Ngoc Jewelry Store</h2>
+                                                <p class="text-body-md-regular text-neutral-500">2304 Rogers Ave. <br>
+                                                    Fort Smith AR 72901</p>
+                                            </div>
+                                        </label>
+                                        <label
+                                            class="cursor-pointer py-4 flex gap-4 items-center border-b border-solid border-neutral-200">
+                                            <input type="radio" name="bill" class="radio-blue">
+                                            <div class="flex flex-col gap-1">
+                                                <h2 class="text-body-md-mdeium text-gray-8">Minh Ngoc Jewelry Store</h2>
+                                                <p class="text-body-md-regular text-neutral-500">2304 Rogers Ave. <br>
+                                                    Fort Smith AR 72901</p>
+                                            </div>
+                                        </label>
+                                    </div>
+
+                                    <button class="flex items-center gap-4">
+                                        <div class="">
+                                            <figure class="w-5 h-5"><img
+                                                    src="/assets/image/icon/double-chev-down-20.svg" alt="icon">
+                                            </figure>
+                                        </div>
+                                        <p class="text-body-sm-regular text-gray-9">View more detail</p>
+
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
                     </div>
+                    <div class="w-full lg:max-w-[783px]">
+                        <div class="w-full rounded-xl bg-white flex flex-col gap-5 p-6 rounded-xl">
+                            <h2 class="text-heading-h6 text-gray-8">Minh Ngoc Jewelry Store</h2>
+                            <div class="iframe-container">
+                                <iframe
+                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3725.339276478062!2d105.78312497584038!3d20.9790328894836!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135acd27916caa5%3A0xd1a865aa1cacdd14!2zMTAyIMSQxrDhu51uZyBUcuG6p24gUGjDuiwgUC4gTeG7mSBMYW8sIEjDoCDEkMO0bmcsIEjDoCBO4buZaSwgVmnhu4d0IE5hbQ!5e0!3m2!1svi!2s!4v1731312591640!5m2!1svi!2s"
+                                    style="border:0;" allowfullscreen="" loading="lazy"
+                                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+                            </div>
+
+                            <div class="flex gap-3">
+                                <div class="flex-1 flex flex-col gap-3">
+                                    <div class="flex items-center gap-4">
+                                        <p class="text-body-md-semibold text-secondary">Open</p>
+                                        <div class="w-1 h-1 rounded-full bg-[#D9D9D9]"></div>
+                                        <p class="text-body-md-regular text-neutral-500">Closes at 22:00</p>
+                                    </div>
+                                    <div class="flex flex-col gap-1">
+                                        <p class="text-body-md-regular text-neutral-500">Address:</p>
+                                        <a href="#" class="text-body-md-regular text-gray-8">2304 Rogers Ave.
+                                            Fort Smith AR 72901</a>
+                                    </div>
+                                    <div class="flex flex-col gap-1">
+                                        <p class="text-body-md-regular text-neutral-500">Phone number:</p>
+                                        <a href="#" class="text-body-md-regular text-gray-8">480-917-3886</p>
+                                    </div>
+                                </div>
+                                <a href="#" class="button bg-primary text-body-md-semibold text-white">See direction</a>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </section>

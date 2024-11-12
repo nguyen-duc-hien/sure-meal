@@ -912,12 +912,20 @@ input.filter-search:focus {
   color: #6b7280;
 }
 .input-label select.input-field {
+  display: flex;
+  padding: 12px;
+  align-items: flex-start;
+  border: 1px solid #dedfe0;
+  border-radius: 8px;
   width: 100%;
   appearance: none;
   /* Remove default arrow */
   -webkit-appearance: none;
   -moz-appearance: none;
-  background: url("../image/icon/chev-down-16.svg") no-repeat right 16px center;
+  background-color: #f2f3f5; /* Màu nền */
+  background-image: url("../image/icon/chev-down-16.svg"); /* Hình nền */
+  background-repeat: no-repeat;
+  background-position: right 16px center;
   background-size: 16px 16px;
 }
 .input-label .input-trans {
