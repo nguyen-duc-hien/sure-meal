@@ -215,8 +215,26 @@
                 </nav>
             </div>
         </section>
+        <style>
+            .view-offer {
+                position: absolute;
+                transition: all 0.5s ease-in-out;
+            }
 
+            .view-offer.active {
+                position: static;
 
+            }
+
+            .rotate-icon {
+                transition: transform 0.5s ease-in-out;
+            }
+
+            .rotate-icon.active {
+                transform: rotate(180deg);
+                transition: all 0.5s ease-in-out;
+            }
+        </style>
         <section class="pb-20">
             <div class="container">
                 <div class="w-full flex flex-col lg:flex-row gap-6">
@@ -235,7 +253,8 @@
                             </button>
                         </div>
                         <!-- item select -->
-                        <div class="w-full flex gap-6 items-center p-6 rounded-xl bg-white">
+                        <div
+                            class="w-full flex flex-wrap lg:flex-nowrap gap-4 lg:gap-6 items-center p-6 rounded-xl bg-white">
                             <label class="custom-checkbox">
                                 <div class="checkbox-container">
                                     <input type="checkbox">
@@ -243,12 +262,14 @@
                                 </div>
                             </label>
 
-                            <div class="flex w-2/3 max-w-[454px] items-center gap-5">
-                                <figure class="w-[100px] h-[100px] rounded-xl border border-solid border-neutral-200">
+                            <div class="flex flex-1 lg:flex-0 md:w-2/3 max-w-[454px] items-center gap-5">
+                                <figure
+                                    class="w-[60px] h-[60px] md:w-[100px] md:h-[100px] rounded-xl border border-solid border-neutral-200">
                                     <img src="/assets/image/product/cart-item.png" alt="item">
                                 </figure>
                                 <div class="flex-1 flex flex-col gap-2">
-                                    <h2 class="text-body-md-medium text-gray-8">SureMeal™ Vital - Immune Builder
+                                    <h2 class="text-body-md-medium text-gray-8 truncate-2row">SureMeal™ Vital - Immune
+                                        Builder
                                         Enhanced Collagen, Biotin & HA</h2>
                                     <select class="input-neutral-200 text-body-sm-regular text-gray-7">
                                         <option value="">Type: 3 Pack</option>
@@ -259,7 +280,7 @@
                                 </div>
                             </div>
 
-                            <div class="min-w-[143px] flex flex-col justify-end gap-1">
+                            <div class="md:min-w-[143px] flex flex-col justify-end gap-1">
                                 <p class="text-body-md-medium text-primary">$96.00 USD</p>
                                 <p class="line-through text-body-sm-regular text-neutral-500">$120.00 USD</p>
                             </div>
@@ -280,16 +301,103 @@
 
                     <div class="flex flex-col gap-4 w-full lg:max-w-[437px]">
                         <div
-                            class="select-offer flex items-center gap-6 justify-between px-6 py-4 rounded-t-xl bg-white">
+                            class="select-offer cursor-pointer flex items-center gap-6 justify-between px-6 py-4 rounded-t-xl bg-white">
                             <div class="flex items-center gap-3">
                                 <figure class="w-6 h-6"><img src="/assets/image/icon/ticket-sale-primary.svg"
                                         alt="icon">
                                 </figure>
                                 <p class="text-body-md-medium text-gray-9">Select or enter an offer</p>
                             </div>
-                            <button class="button bg-trans">
+                            <button class="button bg-trans transition-transform rotate-0">
                                 <figure class=""><img src="/assets/image/icon/chev-up-24.svg" alt="icon"></figure>
                             </button>
+                        </div>
+
+                        <div
+                            class="view-offer absolute left-0 right-0 flex flex-col items-center gap-6 px-6 py-4 rounded-xl bg-white overflow-hidden max-h-0 opacity-0 invisible transition-[max-height,opacity] duration-500 ease-in-out">
+                            <label class="input-label">
+                                <p class="input-title">Discount code</p>
+                                <input type="text" class="input-field" placeholder="Enter your discount code here">
+                            </label>
+                            <button class="button bg-primary text-body-md-semibold w-full" disabled>Apply code</button>
+
+                            <div class="flex flex-col gap-3">
+                                <p>Promotion (2)</p>
+                                <div class="flex flex-col gap-3 max-h-[400px] overflow-auto custom-scrollbar">
+                                    <!-- single promo -->
+                                    <div class="py-3 flex items-center gap-5 rounded-xl bg-white">
+                                        <figure class="w-14 h-14"><img src="/assets/image/icon/couple.svg" alt="couple">
+                                        </figure>
+                                        <div class="flex-1 flex flex-col gap-2">
+                                            <h2 class="text-body-md-medium text-gray-9 truncate-2row">Get $60.00 USD
+                                                discount valid until
+                                                September 26</h2>
+                                            <p class="text-body-xs-regular text-neutral-500 truncate-2row">Applicable to
+                                                SureMeal™ Vital -
+                                                Immune Builder
+                                                Enhanced
+                                                Collagen, Biotin & HA
+                                            </p>
+                                        </div>
+                                        <button class="w-8 h-8 flex items-center justify-center rounded-full bg-[#FEE]">
+                                            <figure class="w-6 h-6"><img src="/assets/image/icon/plus-24-primary.svg"
+                                                    alt="icon"></figure>
+                                        </button>
+                                    </div>
+                                    <!-- single promo -->
+                                    <div class="py-3 flex items-center gap-5 rounded-xl bg-white">
+                                        <figure class="w-14 h-14"><img src="/assets/image/icon/couple.svg" alt="couple">
+                                        </figure>
+                                        <div class="flex-1 flex flex-col gap-2">
+                                            <h2 class="text-body-md-medium text-gray-9 truncate-2row">Get $60.00 USD
+                                                discount valid until
+                                                September 26</h2>
+                                            <p class="text-body-xs-regular text-neutral-500 truncate-2row">Applicable to
+                                                SureMeal™ Vital -
+                                                Immune Builder
+                                                Enhanced
+                                                Collagen, Biotin & HA
+                                            </p>
+                                        </div>
+                                        <button class="w-8 h-8 flex items-center justify-center rounded-full bg-[#FEE]">
+                                            <figure class="w-6 h-6"><img src="/assets/image/icon/plus-24-primary.svg"
+                                                    alt="icon"></figure>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="flex flex-col gap-5 px-6 py-4 rounded-xl bg-white">
+                            <p>Order information</p>
+                            <div class="flex flex-col gap-3">
+                                <div class="flex items-center justify-between">
+                                    <p class="text-body-sm-regular text-gray-7">Sub total</p>
+                                    <h2 class="text-body-md-medium text-gray-9">$190.00 USD</h2>
+                                </div>
+                                <hr class="divider">
+                                <div class="flex items-center justify-between">
+                                    <p class="text-body-sm-regular text-gray-7">Saved</p>
+                                    <h2 class="text-body-md-medium text-gray-9">$190.00 USD</h2>
+                                </div>
+                                <div class="flex items-center justify-between">
+                                    <p class="text-body-sm-regular text-gray-7">Voucher</p>
+                                    <h2 class="text-body-md-medium text-gray-9">$190.00 USD</h2>
+                                </div>
+                                <div class="flex items-center justify-between">
+                                    <p class="text-body-sm-regular text-gray-7">Shipping fee</p>
+                                    <p class="text-body-sm-regular text-secondary">Free of charge</p>
+                                    <!-- <h2 class="text-body-md-medium text-gray-9">$190.00 USD</h2> -->
+                                </div>
+                                <hr class="divider">
+                                <div class="flex items-center justify-between">
+                                    <p class="text-body-sm-regular text-gray-7">Total payment</p>
+                                    <h2 class="text-body-xl-medium text-primary">$190.00 USD</h2>
+                                </div>
+                            </div>
+                            <a href="#" class="mt-3 w-full button bg-primary text-body-md-semibold text-white">Check
+                                out</a>
                         </div>
                     </div>
                 </div>
@@ -475,6 +583,40 @@
             </div>
         </div>
     </footer>
+
+    <!-- script offer js -->
+    <script defer>
+        const selectOffer = document.querySelector(".select-offer");
+        const viewOffer = document.querySelector(".view-offer");
+        const rotateIcon = document.querySelector(".rotate-icon");
+
+        selectOffer.addEventListener("click", () => {
+            if (viewOffer.classList.contains("invisible")) {
+                // Hiển thị view-offer
+                viewOffer.classList.remove("absolute", "invisible", "opacity-0", "max-h-0");
+                viewOffer.classList.add("active", "opacity-100", "max-h-[1000px]");
+
+                // Xoay icon
+                rotateIcon.classList.add("active");
+            } else {
+                // Thu gọn max-height về 0 trước
+                viewOffer.classList.add("max-h-0", "opacity-0");
+                viewOffer.classList.remove("max-h-[500px]", "opacity-100");
+
+                // Sau 500ms (đúng với thời gian transition của max-height), thêm absolute
+                setTimeout(() => {
+                    if (viewOffer.classList.contains("max-h-0")) {
+                        viewOffer.classList.add("absolute", "invisible");
+                        viewOffer.classList.remove("active");
+                    }
+                }, 500); // 500ms trùng với transition duration
+                // Xoay lại icon
+                rotateIcon.classList.remove("active");
+            }
+        });
+
+
+    </script>
 
     <!-- header script -->
     <script defer src="/assets/js/header.js"></script>

@@ -171,7 +171,7 @@ select {
     line-height: 160%;
     font-weight: 600;
     @media screen and (max-width: 1439px) {
-      font-size: 18px;
+      font-size: 20px;
     }
     @media screen and (max-width: 1280px) {
       font-size: 16px;
@@ -190,13 +190,13 @@ select {
     line-height: 150%;
 
     @media screen and (max-width: 1439px) {
-      font-size: 18px;
+      font-size: 20px;
     }
     @media screen and (max-width: 1280px) {
       font-size: 16px;
     }
     @media screen and (max-width: 992px) {
-      font-size: 14px;
+      font-size: 16px;
     }
 
     &-uppercase {
@@ -231,13 +231,13 @@ select {
     line-height: 155.6%;
 
     @media screen and (max-width: 1439px) {
-      font-size: 16px;
+      // font-size: 16px;
     }
     @media screen and (max-width: 1280px) {
       font-size: 16px;
     }
     @media screen and (max-width: 992px) {
-      font-size: 14px;
+      font-size: 16px;
     }
 
     &-uppercase {
@@ -272,13 +272,13 @@ select {
     line-height: 150%;
 
     @media screen and (max-width: 1439px) {
-      font-size: 14px;
+      // font-size: 14px;
     }
     @media screen and (max-width: 1280px) {
       font-size: 14px;
     }
     @media screen and (max-width: 992px) {
-      font-size: 12px;
+      font-size: 14px;
     }
 
     &-uppercase {
@@ -553,6 +553,12 @@ select.input-neutral-200 {
   &.bg-white {
     background-color: #fff;
     border-color: #fff;
+  }
+  &:disabled,
+  &[disabled] {
+    border-color: #d1d5db;
+    background: #d1d5db;
+    color: #6b7280;
   }
   &.bg-neutral-200 {
     background-color: #e5e7eb;
