@@ -660,7 +660,7 @@ select:focus {
 }
 @media screen and (max-width: 1439px) {
   .text-heading-h7 {
-    font-size: 18px;
+    font-size: 20px;
   }
 }
 @media screen and (max-width: 1280px) {
@@ -683,7 +683,7 @@ select:focus {
 }
 @media screen and (max-width: 1439px) {
   .text-body-xl, .text-body-xl-regular, .text-body-xl-medium, .text-body-xl-semibold, .text-body-xl-bold, .text-body-xl-uppercase {
-    font-size: 18px;
+    font-size: 20px;
   }
 }
 @media screen and (max-width: 1280px) {
@@ -693,7 +693,7 @@ select:focus {
 }
 @media screen and (max-width: 992px) {
   .text-body-xl, .text-body-xl-regular, .text-body-xl-medium, .text-body-xl-semibold, .text-body-xl-bold, .text-body-xl-uppercase {
-    font-size: 14px;
+    font-size: 16px;
   }
 }
 .text-body-xl-uppercase {
@@ -716,11 +716,6 @@ select:focus {
   font-size: 18px;
   line-height: 155.6%;
 }
-@media screen and (max-width: 1439px) {
-  .text-body-lg, .text-body-lg-regular, .text-body-lg-medium, .text-body-lg-semibold, .text-body-lg-bold, .text-body-lg-uppercase {
-    font-size: 16px;
-  }
-}
 @media screen and (max-width: 1280px) {
   .text-body-lg, .text-body-lg-regular, .text-body-lg-medium, .text-body-lg-semibold, .text-body-lg-bold, .text-body-lg-uppercase {
     font-size: 16px;
@@ -728,7 +723,7 @@ select:focus {
 }
 @media screen and (max-width: 992px) {
   .text-body-lg, .text-body-lg-regular, .text-body-lg-medium, .text-body-lg-semibold, .text-body-lg-bold, .text-body-lg-uppercase {
-    font-size: 14px;
+    font-size: 16px;
   }
 }
 .text-body-lg-uppercase {
@@ -751,11 +746,6 @@ select:focus {
   font-size: 16px;
   line-height: 150%;
 }
-@media screen and (max-width: 1439px) {
-  .text-body-md, .text-body-md-regular, .input-label .input-field, .text-body-md-medium, .input-label .input-title, .text-body-md-semibold, .text-body-md-bold, .text-body-md-uppercase {
-    font-size: 14px;
-  }
-}
 @media screen and (max-width: 1280px) {
   .text-body-md, .text-body-md-regular, .input-label .input-field, .text-body-md-medium, .input-label .input-title, .text-body-md-semibold, .text-body-md-bold, .text-body-md-uppercase {
     font-size: 14px;
@@ -763,7 +753,7 @@ select:focus {
 }
 @media screen and (max-width: 992px) {
   .text-body-md, .text-body-md-regular, .input-label .input-field, .text-body-md-medium, .input-label .input-title, .text-body-md-semibold, .text-body-md-bold, .text-body-md-uppercase {
-    font-size: 12px;
+    font-size: 14px;
   }
 }
 .text-body-md-uppercase {
@@ -922,12 +912,20 @@ input.filter-search:focus {
   color: #6b7280;
 }
 .input-label select.input-field {
+  display: flex;
+  padding: 12px;
+  align-items: flex-start;
+  border: 1px solid #dedfe0;
+  border-radius: 8px;
   width: 100%;
   appearance: none;
   /* Remove default arrow */
   -webkit-appearance: none;
   -moz-appearance: none;
-  background: url("../image/icon/chev-down-16.svg") no-repeat right 16px center;
+  background-color: #f2f3f5; /* Màu nền */
+  background-image: url("../image/icon/chev-down-16.svg"); /* Hình nền */
+  background-repeat: no-repeat;
+  background-position: right 16px center;
   background-size: 16px 16px;
 }
 .input-label .input-trans {
@@ -998,6 +996,11 @@ select.input-neutral-200 {
 .button.bg-white {
   background-color: #fff;
   border-color: #fff;
+}
+.button:disabled, .button[disabled] {
+  border-color: #d1d5db;
+  background: #d1d5db;
+  color: #6b7280;
 }
 .button.bg-neutral-200 {
   background-color: #e5e7eb;
