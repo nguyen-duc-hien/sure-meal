@@ -1017,6 +1017,9 @@ select.input-neutral-200 {
 .button.p-8-20 {
   padding: 8px 20px;
 }
+.button.p-12-20 {
+  padding: 12px 20px;
+}
 .button.p-10-20 {
   padding: 10px 20px;
 }
