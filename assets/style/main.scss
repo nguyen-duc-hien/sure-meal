@@ -389,6 +389,50 @@ select {
   }
 }
 
+.badge {
+  display: flex;
+  padding: 4px 8px;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+  border-radius: 8px;
+  @extend .text-body-sm-medium;
+  .dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 99px;
+  }
+  &.active {
+    .dot {
+      background: #12b76a;
+    }
+    color: #027a48;
+    background: #ecfdf3;
+  }
+  &.inactive {
+    .dot {
+      background: #667085;
+    }
+    color: #344054;
+    background: #f2f4f7;
+  }
+
+  &.error {
+    .dot {
+      background: #f04438;
+    }
+    color: #b42318;
+    background: #fef3f2;
+  }
+  &.warning {
+    .dot {
+      background: #fff8d6;
+    }
+    color: #ffa300;
+    background: #fff6ed;
+  }
+}
+
 // search header style
 input.home-search {
   display: flex;
@@ -433,6 +477,14 @@ input.filter-search {
   &:focus {
     border-color: #000;
   }
+}
+
+.neutral-200 {
+  width: fit-content;
+  appearance: none;
+  padding: 8px 12px;
+  border-radius: 8px;
+  background-color: #f3f4f6; /* Màu nền */
 }
 
 // input custom style
