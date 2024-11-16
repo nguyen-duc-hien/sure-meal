@@ -397,37 +397,19 @@ select {
   gap: 6px;
   border-radius: 8px;
   @extend .text-body-sm-medium;
-  .dot {
-    width: 6px;
-    height: 6px;
-    border-radius: 99px;
+  &.success {
+    color: #00a151;
+    background: #dbffe4;
   }
-  &.active {
-    .dot {
-      background: #12b76a;
-    }
-    color: #027a48;
-    background: #ecfdf3;
-  }
-  &.inactive {
-    .dot {
-      background: #667085;
-    }
+  &.cancel {
     color: #344054;
     background: #f2f4f7;
   }
-
   &.error {
-    .dot {
-      background: #f04438;
-    }
-    color: #b42318;
-    background: #fef3f2;
+    color: #e02d2d;
+    background: #ffe7e0;
   }
   &.warning {
-    .dot {
-      background: #fff8d6;
-    }
     color: #ffa300;
     background: #fff6ed;
   }

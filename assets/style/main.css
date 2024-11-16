@@ -836,38 +836,21 @@ select:focus {
   gap: 6px;
   border-radius: 8px;
 }
-.badge .dot {
-  width: 6px;
-  height: 6px;
-  border-radius: 99px;
+.badge.success {
+  color: #00a151;
+  background: #dbffe4;
 }
-.badge.active {
-  color: #027a48;
-  background: #ecfdf3;
-}
-.badge.active .dot {
-  background: #12b76a;
-}
-.badge.inactive {
+.badge.cancel {
   color: #344054;
   background: #f2f4f7;
 }
-.badge.inactive .dot {
-  background: #667085;
-}
 .badge.error {
-  color: #b42318;
-  background: #fef3f2;
-}
-.badge.error .dot {
-  background: #f04438;
+  color: #e02d2d;
+  background: #ffe7e0;
 }
 .badge.warning {
   color: #ffa300;
   background: #fff6ed;
-}
-.badge.warning .dot {
-  background: #fff8d6;
 }
 
 input.home-search {
