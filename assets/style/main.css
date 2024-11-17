@@ -947,6 +947,12 @@ input.filter-search:focus {
 .input-label .input-field::placeholder {
   color: #6b7280;
 }
+.input-label .input-field.pr-44 {
+  padding-right: 44px;
+}
+.input-label .input-field:disabled {
+  color: #9ca3af;
+}
 .input-label select.input-field {
   display: flex;
   padding: 12px;
@@ -1018,6 +1024,7 @@ select.input-neutral-200 {
   border-radius: 8px;
   border: 1px solid;
   border-color: transparent;
+  cursor: pointer;
 }
 .button.bg-primary {
   background-color: var(--primary);
@@ -1541,4 +1548,41 @@ hr.divider-footer {
   font-weight: 600;
   background: #fff;
   color: #0e74bc;
+}
+
+.dashboard-container {
+  display: flex;
+  flex-direction: column;
+  padding: 8px 0;
+  border-radius: 12px;
+  background: #fff;
+}
+.dashboard-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 20px 24px;
+  border-left: 4px solid;
+  border-color: transparent;
+  color: #373a51;
+  background: #fff;
+}
+.dashboard-item svg path {
+  fill: #373a51;
+}
+.dashboard-item.active {
+  border-color: #0e74bc;
+  color: #0e74bc;
+  background: linear-gradient(90deg, rgba(2, 128, 206, 0.1) 0%, rgba(255, 255, 255, 0) 150.99%);
+}
+.dashboard-item.active svg path {
+  fill: #0e74bc;
+}
+.dashboard-item:hover {
+  border-color: #0e74bc;
+  color: #0e74bc;
+  background: linear-gradient(90deg, rgba(2, 128, 206, 0.1) 0%, rgba(255, 255, 255, 0) 150.99%);
+}
+.dashboard-item:hover svg path {
+  fill: #0e74bc;
 }/*# sourceMappingURL=main.css.map */
