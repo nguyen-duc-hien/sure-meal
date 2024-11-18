@@ -1625,7 +1625,7 @@ hr.divider-footer {
 }
 .progress-order .progress-order-bar .progress-order-item.active .dot {
   background: #0e74bc;
-  border-color: #0e74bc;
+  border-color: #fff;
   position: relative;
 }
 .progress-order .progress-order-bar .progress-order-item.active .dot::after {
@@ -1642,6 +1642,14 @@ hr.divider-footer {
   background-size: contain;
 }
 .progress-order .progress-order-bar .progress-order-item.active .content {
+  opacity: 1;
+}
+.progress-order .progress-order-bar .progress-order-item.processing .dot {
+  background: #0e74bc;
+  border-color: #fff;
+  position: relative;
+}
+.progress-order .progress-order-bar .progress-order-item.processing .content {
   opacity: 1;
 }
 .progress-order .progress-order-bar .progress-order-divider {

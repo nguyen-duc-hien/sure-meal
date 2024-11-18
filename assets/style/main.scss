@@ -1237,7 +1237,7 @@ hr {
       &.active {
         .dot {
           background: #0e74bc;
-          border-color: #0e74bc;
+          border-color: #fff;
           position: relative;
           &::after {
             content: "";
@@ -1252,6 +1252,16 @@ hr {
             background-repeat: no-repeat;
             background-size: contain;
           }
+        }
+        .content {
+          opacity: 1;
+        }
+      }
+      &.processing {
+        .dot {
+          background: #0e74bc;
+          border-color: #fff;
+          position: relative;
         }
         .content {
           opacity: 1;
