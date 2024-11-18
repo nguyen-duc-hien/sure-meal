@@ -742,17 +742,17 @@ select:focus {
 .text-body-lg-regular {
   font-weight: 400;
 }
-.text-body-md, .text-body-md-regular, .input-label .input-field, .text-body-md-medium, .input-label .input-title, .text-body-md-semibold, .text-body-md-bold, .text-body-md-uppercase {
+.text-body-md, .text-body-md-regular, .input-label .input-field, .text-body-md-medium, .input-label .input-title, .text-body-md-semibold, .progress-order .progress-order-bar .progress-order-item .content, .text-body-md-bold, .text-body-md-uppercase {
   font-size: 16px;
   line-height: 150%;
 }
 @media screen and (max-width: 1280px) {
-  .text-body-md, .text-body-md-regular, .input-label .input-field, .text-body-md-medium, .input-label .input-title, .text-body-md-semibold, .text-body-md-bold, .text-body-md-uppercase {
+  .text-body-md, .text-body-md-regular, .input-label .input-field, .text-body-md-medium, .input-label .input-title, .text-body-md-semibold, .progress-order .progress-order-bar .progress-order-item .content, .text-body-md-bold, .text-body-md-uppercase {
     font-size: 14px;
   }
 }
 @media screen and (max-width: 992px) {
-  .text-body-md, .text-body-md-regular, .input-label .input-field, .text-body-md-medium, .input-label .input-title, .text-body-md-semibold, .text-body-md-bold, .text-body-md-uppercase {
+  .text-body-md, .text-body-md-regular, .input-label .input-field, .text-body-md-medium, .input-label .input-title, .text-body-md-semibold, .progress-order .progress-order-bar .progress-order-item .content, .text-body-md-bold, .text-body-md-uppercase {
     font-size: 14px;
   }
 }
@@ -763,7 +763,7 @@ select:focus {
 .text-body-md-bold {
   font-weight: 700;
 }
-.text-body-md-semibold {
+.text-body-md-semibold, .progress-order .progress-order-bar .progress-order-item .content {
   font-weight: 600;
 }
 .text-body-md-medium, .input-label .input-title {
@@ -1585,4 +1585,83 @@ hr.divider-footer {
 }
 .dashboard-item:hover svg path {
   fill: #0e74bc;
+}
+
+.progress-order {
+  width: 899px;
+  padding-bottom: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.progress-order .progress-order-bar {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 234px);
+  position: relative;
+}
+.progress-order .progress-order-bar .progress-order-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  z-index: 2;
+}
+.progress-order .progress-order-bar .progress-order-item .dot {
+  width: 32px;
+  height: 32px;
+  border: 2px solid;
+  border-color: #0e74bc;
+  background: #fff;
+  border-radius: 99px;
+}
+.progress-order .progress-order-bar .progress-order-item .content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  opacity: 0.5;
+  color: #191c1f;
+}
+.progress-order .progress-order-bar .progress-order-item.active .dot {
+  background: #0e74bc;
+  border-color: #0e74bc;
+  position: relative;
+}
+.progress-order .progress-order-bar .progress-order-item.active .dot::after {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-image: url("/assets/image/order/chech-12.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.progress-order .progress-order-bar .progress-order-item.active .content {
+  opacity: 1;
+}
+.progress-order .progress-order-bar .progress-order-divider {
+  width: calc(25% + 16px);
+  height: 9px;
+  border-radius: 100px;
+  opacity: 0.16;
+  background: var(--secondary);
+  position: absolute;
+  top: 11.5px;
+}
+.progress-order .progress-order-bar .progress-order-divider.first {
+  left: 117px;
+}
+.progress-order .progress-order-bar .progress-order-divider.second {
+  left: 351px;
+}
+.progress-order .progress-order-bar .progress-order-divider.third {
+  right: 71px;
+}
+.progress-order .progress-order-bar .progress-order-divider.active {
+  opacity: 1;
 }/*# sourceMappingURL=main.css.map */

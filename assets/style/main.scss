@@ -1199,3 +1199,85 @@ hr {
     }
   }
 }
+
+.progress-order {
+  width: 899px;
+  padding-bottom: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .progress-order-bar {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 234px);
+    position: relative;
+    .progress-order-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 16px;
+      z-index: 2;
+      .dot {
+        width: 32px;
+        height: 32px;
+        border: 2px solid;
+        border-color: #0e74bc;
+        background: #fff;
+        border-radius: 99px;
+      }
+      .content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+        opacity: 0.5;
+        @extend .text-body-md-semibold;
+        color: #191c1f;
+      }
+      &.active {
+        .dot {
+          background: #0e74bc;
+          border-color: #0e74bc;
+          position: relative;
+          &::after {
+            content: "";
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-image: url("/assets/image/order/chech-12.svg");
+            background-repeat: no-repeat;
+            background-size: contain;
+          }
+        }
+        .content {
+          opacity: 1;
+        }
+      }
+    }
+    .progress-order-divider {
+      width: calc(25% + 16px);
+      height: 9px;
+      border-radius: 100px;
+      opacity: 0.16;
+      background: var(--secondary);
+      position: absolute;
+      top: calc(32px / 2 - 9px / 2);
+      &.first {
+        left: calc(234px / 2);
+      }
+      &.second {
+        left: calc(234px + 234px / 2);
+      }
+      &.third {
+        right: calc(234px / 2 - 46px);
+      }
+      &.active {
+        opacity: 1;
+      }
+    }
+  }
+}
