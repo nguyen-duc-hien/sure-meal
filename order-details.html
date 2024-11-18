@@ -239,137 +239,163 @@
             <div class="container">
                 <div class="flex flex-col lg:flex-row gap-6">
                     <div class="w-full lg:w-[67%] lg:max-w-[900px]">
-                        <div class="w-full flex flex-col items-center justify-center bg-white rounded-xl">
-                            <div
-                                class="w-full flex flex-wrap items-center justify-between px-8 py-6 border-b border-neutral-200 border-solid">
-                                <div class="flex flex-wrap items-center gap-4">
-                                    <p class="text-body-md-medium text-gray-8">22/03/2024</p>
-                                    <div class="w-1 h-1 rounded-full bg-[#D9D9D9]"></div>
-                                    <div class="flex items-center gap-2">
-                                        <p class="text-body-md-medium text-gray-8">Order code:</p>
-                                        <p class="text-body-md-medium text-neutral-500">#123ABCXYZ</p>
-                                        <button class="button button-trans p-0">
-                                            <figure class="w-5 h-5"><img src="/assets/image/icon/duplicate.svg"
-                                                    alt="icon">
+                        <div class="w-full flex flex-col gap-6">
+                            <div class="w-full flex flex-col items-center justify-center bg-white rounded-xl">
+                                <div
+                                    class="w-full flex flex-wrap items-center justify-between px-8 py-6 border-b border-neutral-200 border-solid">
+                                    <div class="flex flex-wrap items-center gap-4">
+                                        <p class="text-body-md-medium text-gray-8">22/03/2024</p>
+                                        <div class="w-1 h-1 rounded-full bg-[#D9D9D9]"></div>
+                                        <div class="flex items-center gap-2">
+                                            <p class="text-body-md-medium text-gray-8">Order code:</p>
+                                            <p class="text-body-md-medium text-neutral-500">#123ABCXYZ</p>
+                                            <button class="button button-trans p-0">
+                                                <figure class="w-5 h-5"><img src="/assets/image/icon/duplicate.svg"
+                                                        alt="icon">
+                                                </figure>
+                                            </button>
+                                        </div>
+                                        <div class="w-1 h-1 rounded-full bg-[#D9D9D9]"></div>
+                                        <p class="text-body-md-medium text-neutral-500">Deliver</p>
+                                        <div class="w-1 h-1 rounded-full bg-[#D9D9D9]"></div>
+                                        <p class="text-body-md-medium text-neutral-500">2 products</p>
+                                    </div>
+
+                                    <div class="badge warning">
+                                        Process
+                                    </div>
+                                </div>
+
+                                <div
+                                    class="min-h-[120px] overflow-x-auto 3xl:overflow-x-hidden custom-scrollbar w-full py-6 flex flex-col gap-3 border-b border-solid border-neutral-200">
+                                    <!-- progress bar -->
+                                    <div class="progress-order">
+                                        <div class="progress-order-bar">
+                                            <!-- thêm active khi đã xong tiến trình -->
+                                            <div class="progress-order-item active">
+                                                <div class="dot"></div>
+                                                <div class="content">
+                                                    <figure class="w-36"><img
+                                                            src="/assets/image/order/note-book-primary.svg" alt="icon">
+                                                    </figure>
+                                                    <p>Order Placed</p>
+                                                </div>
+                                            </div>
+                                            <!-- thêm active khi đã xong tiến trình -->
+                                            <div class="progress-order-divider first active"></div>
+                                            <div class="progress-order-item processing">
+                                                <div class="dot"></div>
+                                                <div class="content">
+                                                    <figure class="w-36"><img src="/assets/image/order/pakage.svg"
+                                                            alt="icon">
+                                                    </figure>
+                                                    <p>Packaging</p>
+                                                </div>
+                                            </div>
+                                            <!-- thêm active khi đã xong tiến trình -->
+                                            <div class="progress-order-divider second"></div>
+                                            <div class="progress-order-item">
+                                                <div class="dot"></div>
+                                                <div class="content">
+                                                    <figure class="w-36"><img src="/assets/image/order/truck.svg"
+                                                            alt="icon">
+                                                    </figure>
+                                                    <p>On The Road</p>
+                                                </div>
+                                            </div>
+                                            <!-- thêm active khi đã xong tiến trình -->
+                                            <div class="progress-order-divider third"></div>
+                                            <div class="progress-order-item">
+                                                <div class="dot"></div>
+                                                <div class="content">
+                                                    <figure class="w-36"><img src="/assets/image/order/deliver.svg"
+                                                            alt="icon">
+                                                    </figure>
+                                                    <p>Delivered</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="w-full flex flex-col lg:flex-row items-center gap-6 py-4 px-8">
+                                    <div class="w-full flex flex-col gap-4">
+                                        <div class="flex items-center gap-2">
+                                            <figure class="w-6 h-6"><img src="/assets/image/icon/user.svg" alt="icon">
                                             </figure>
-                                        </button>
+                                            <p class="text-body-md-medium text-gray-8">Recipient information</p>
+                                        </div>
+                                        <div class="min-h-[76px] flex flex-col gap-2">
+                                            <h2 class="text-body-md-medium text-gray-8">Le Thuy Linh</h2>
+                                            <p class="text-body-sm-regular text-neutral-500">
+                                                Address: 8815 Fairbanks North Houston Rd Houston, TX 77064
+                                                <br>
+                                                Phone number: 0123456789
+                                            </p>
+                                        </div>
                                     </div>
-                                    <div class="w-1 h-1 rounded-full bg-[#D9D9D9]"></div>
-                                    <p class="text-body-md-medium text-neutral-500">Deliver</p>
-                                    <div class="w-1 h-1 rounded-full bg-[#D9D9D9]"></div>
-                                    <p class="text-body-md-medium text-neutral-500">2 products</p>
-                                </div>
+                                    <div class=" w-full h-[1px] lg:w-[1px] lg:h-[68px] bg-neutral-300"></div>
+                                    <div class="w-full flex flex-col gap-4">
+                                        <div class="flex items-center gap-2">
+                                            <figure class="w-6 h-6"><img src="/assets/image/icon/card.svg" alt="icon">
+                                            </figure>
+                                            <p class="text-body-md-medium text-gray-8">Payment method</p>
+                                        </div>
+                                        <div class="min-h-[76px] flex gap-3">
+                                            <figure class="w-[46px] h-[32px]"><img src="/assets/image/badge-visa.svg"
+                                                    alt="visa"></figure>
+                                            <h2 class="text-body-md-medium text-gray-8">Le Thuy Linh</h2>
 
-                                <div class="badge warning">
-                                    Process
-                                </div>
-                            </div>
-
-                            <div
-                                class="min-h-[120px] overflow-x-auto 3xl:overflow-x-hidden custom-scrollbar w-full py-6 flex flex-col gap-3 border-b border-solid border-neutral-200">
-                                <!-- progress bar -->
-                                <div class="progress-order">
-                                    <div class="progress-order-bar">
-                                        <!-- thêm active khi đã xong tiến trình -->
-                                        <div class="progress-order-item active">
-                                            <div class="dot"></div>
-                                            <div class="content">
-                                                <figure class="w-36"><img
-                                                        src="/assets/image/order/note-book-primary.svg" alt="icon">
-                                                </figure>
-                                                <p>Order Placed</p>
-                                            </div>
-                                        </div>
-                                        <!-- thêm active khi đã xong tiến trình -->
-                                        <div class="progress-order-divider first active"></div>
-                                        <div class="progress-order-item processing">
-                                            <div class="dot"></div>
-                                            <div class="content">
-                                                <figure class="w-36"><img src="/assets/image/order/pakage.svg"
-                                                        alt="icon">
-                                                </figure>
-                                                <p>Packaging</p>
-                                            </div>
-                                        </div>
-                                        <!-- thêm active khi đã xong tiến trình -->
-                                        <div class="progress-order-divider second"></div>
-                                        <div class="progress-order-item">
-                                            <div class="dot"></div>
-                                            <div class="content">
-                                                <figure class="w-36"><img src="/assets/image/order/truck.svg"
-                                                        alt="icon">
-                                                </figure>
-                                                <p>On The Road</p>
-                                            </div>
-                                        </div>
-                                        <!-- thêm active khi đã xong tiến trình -->
-                                        <div class="progress-order-divider third"></div>
-                                        <div class="progress-order-item">
-                                            <div class="dot"></div>
-                                            <div class="content">
-                                                <figure class="w-36"><img src="/assets/image/order/deliver.svg"
-                                                        alt="icon">
-                                                </figure>
-                                                <p>Delivered</p>
-                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
 
-                            <div class="w-full flex flex-col lg:flex-row items-center gap-6 py-4 px-8">
-                                <div class="w-full flex flex-col gap-4">
-                                    <div class="flex items-center gap-2">
-                                        <figure class="w-6 h-6"><img src="/assets/image/icon/user.svg" alt="icon">
-                                        </figure>
-                                        <p class="text-body-md-medium text-gray-8">Recipient information</p>
-                                    </div>
-                                    <div class="min-h-[76px] flex flex-col gap-2">
-                                        <h2 class="text-body-md-medium text-gray-8">Le Thuy Linh</h2>
-                                        <p class="text-body-sm-regular text-neutral-500">
-                                            Address: 8815 Fairbanks North Houston Rd Houston, TX 77064
-                                            <br>
-                                            Phone number: 0123456789
-                                        </p>
-                                    </div>
-                                </div>
-                                <div class=" w-full h-[1px] lg:w-[1px] lg:h-[68px] bg-neutral-300"></div>
-                                <div class="w-full flex flex-col gap-4">
-                                    <div class="flex items-center gap-2">
-                                        <figure class="w-6 h-6"><img src="/assets/image/icon/card.svg" alt="icon">
-                                        </figure>
-                                        <p class="text-body-md-medium text-gray-8">Payment method</p>
-                                    </div>
-                                    <div class="min-h-[76px] flex gap-3">
-                                        <figure class="w-[46px] h-[32px]"><img src="/assets/image/badge-visa.svg"
-                                                alt="visa"></figure>
-                                        <h2 class="text-body-md-medium text-gray-8">Le Thuy Linh</h2>
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="flex flex-col gap-4">
-                            <h2 class="text-body-xl-medium text-gray-9">Product list (2)</h2>
-                            <div class="flex flex-col gap-4 lg:gap-6 p-6 rounded-xl bg-white">
-                                <div class="w-full flex flex-wrap lg:flex-nowrap justify-between items-center">
-                                    <div class="flex flex-1 lg:flex-0 md:w-2/3 max-w-[454px] items-center gap-5">
-                                        <figure
-                                            class="w-[60px] h-[60px] md:w-[100px] md:h-[100px] rounded-xl border border-solid border-neutral-200">
-                                            <img src="/assets/image/product/cart-item.png" alt="item">
-                                        </figure>
-                                        <div class="flex-1 flex flex-col gap-2">
-                                            <h2 class="text-body-md-medium text-gray-8 truncate-2row">SureMeal™ Vital -
-                                                Immune
-                                                Builder
-                                                Enhanced Collagen, Biotin & HA</h2>
-                                            <div class="neutral-200 text-body-sm-regular text-gray-7">
-                                                Type: 3 Pack
+                            <div class="flex flex-col gap-4">
+                                <h2 class="text-body-xl-medium text-gray-9">Product list (2)</h2>
+                                <div class="flex flex-col gap-4 lg:gap-6 p-6 rounded-xl bg-white">
+                                    <div
+                                        class="w-full flex flex-col md:flex-row gap-6 lg:gap-0 justify-between items-end md:items-center">
+                                        <div class="flex flex-1 lg:flex-0 md:w-2/3 max-w-[454px] items-center gap-5">
+                                            <figure
+                                                class="w-[60px] h-[60px] md:w-[100px] md:h-[100px] rounded-xl border border-solid border-neutral-200">
+                                                <img src="/assets/image/product/cart-item.png" alt="item">
+                                            </figure>
+                                            <div class="flex-1 flex flex-col gap-2">
+                                                <h2 class="text-body-md-medium text-gray-8 truncate-2row">SureMeal™
+                                                    Vital -
+                                                    Immune
+                                                    Builder
+                                                    Enhanced Collagen, Biotin & HA</h2>
+                                                <div class="neutral-200 text-body-sm-regular text-gray-7">
+                                                    Type: 3 Pack
+                                                </div>
                                             </div>
                                         </div>
+                                        <p class="text-body-md-regular text-gray-8">Quantity: 01</p>
+                                        <p class="text-body-md-medium text-primary">$96.00 </p>
                                     </div>
-                                    <p class="text-body-md-medium text-primary">$96.00 </p>
+                                    <div
+                                        class="w-full flex flex-col md:flex-row gap-6 lg:gap-0 justify-between items-end md:items-center">
+                                        <div class="flex flex-1 lg:flex-0 md:w-2/3 max-w-[454px] items-center gap-5">
+                                            <figure
+                                                class="w-[60px] h-[60px] md:w-[100px] md:h-[100px] rounded-xl border border-solid border-neutral-200">
+                                                <img src="/assets/image/product/cart-item.png" alt="item">
+                                            </figure>
+                                            <div class="flex-1 flex flex-col gap-2">
+                                                <h2 class="text-body-md-medium text-gray-8 truncate-2row">SureMeal™
+                                                    Vital -
+                                                    Immune
+                                                    Builder
+                                                    Enhanced Collagen, Biotin & HA</h2>
+                                                <div class="neutral-200 text-body-sm-regular text-gray-7">
+                                                    Type: 3 Pack
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <p class="text-body-md-regular text-gray-8">Quantity: 01</p>
+                                        <p class="text-body-md-medium text-primary">$96.00 </p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
