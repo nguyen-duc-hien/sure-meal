@@ -26,6 +26,7 @@ tailwind.config = {
             secondary: '#0E74BC',
             white: '#FFF',
             black: '#000',
+            'black-2': '#0F0F0F',
             neutral: {
                 900: "#111527",
                 800: "#1F2237",
