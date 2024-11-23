@@ -6,11 +6,11 @@ document.addEventListener('DOMContentLoaded', function () {
             const index = parseInt(this.getAttribute('data-index'));
 
             // Đặt lại tất cả các ngôi sao thành không sáng
-            stars.forEach(s => s.src = '/assets/image/icon/star-gray.svg');
+            stars.forEach(s => s.src = '../html/assets/image/icon/star-gray.svg');
 
             // Đặt các ngôi sao sáng từ trái sang phải đến ngôi sao được nhấp
             for (let i = 0; i < index; i++) {
-                stars[i].src = '/assets/image/icon/star-yellow.svg';
+                stars[i].src = '../html/assets/image/icon/star-yellow.svg';
             }
         });
     });

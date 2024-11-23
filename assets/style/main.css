@@ -1735,7 +1735,7 @@ hr.divider-footer {
   right: 24px;
 }
 .modal-wrapper .modal-container .modal-content {
-  max-height: 70vh;
+  max-height: 80vh;
   overflow-y: auto;
   z-index: 2;
   padding-right: 22px;
